@@ -363,3 +363,6 @@
 "Timed_off" = "Timed Off";
 "time_arm_disarm_Settings" = "Time arm_disarm Setting";
 "home_time_Settings" = "Home time Setting";
+
+"The_current_state_is_closed" = "The current state is closed";
+"The_current_state_is_open" = "The current state is open";

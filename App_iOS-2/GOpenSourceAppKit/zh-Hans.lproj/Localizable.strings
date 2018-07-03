@@ -447,3 +447,8 @@
 "GP" = "组";
 "SOCKET" = "插座";
 "action" = "动作";
+
+"open" = "开";
+"off" = "关";
+"The_current_state_is_closed" = "当前状态已关";
+"The_current_state_is_open" = "当前状态已开";

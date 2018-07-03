@@ -7,9 +7,11 @@
 //
 
 #import "GSMSmartSwitchTableViewCell.h"
+#import "GosTipView.h"
 
 #define SCREENHEIGHT [UIScreen mainScreen].bounds.size.height//获取设备屏幕的长
 #define SCREENWIDTH [UIScreen mainScreen].bounds.size.width//获取设备屏幕的宽
+#define TitleLabelColor [UIColor colorWithRed:19/255.0 green:152/255.0 blue:234/255.0 alpha:1/1.0]
 
 @implementation GSMSmartSwitchTableViewCell{
     
@@ -17,6 +19,9 @@
     UILabel *_titleLabel;
     UISwitch *_smartSwitch;
     
+    UIButton *offButton;
+    UIButton *openButton;
+    UILabel *statusLabel;
 }
 
 - (void)awakeFromNib {
@@ -26,7 +31,7 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
+    
     // Configure the view for the selected state
 }
 
@@ -63,9 +68,33 @@
     _titleLabel.textColor = [UIColor blackColor];
     [bcview addSubview:_titleLabel];
     
-    _smartSwitch = [[UISwitch alloc]initWithFrame:CGRectMake(SCREENWIDTH-71, 14.5, 51, 31)];//51x31
-    [_smartSwitch addTarget:self action:@selector(switchAction:) forControlEvents:UIControlEventValueChanged];
-    [bcview addSubview:_smartSwitch];
+    offButton = [[UIButton alloc]initWithFrame:CGRectMake(SCREENWIDTH-50, 15, 30, 30)];
+    [offButton setBackgroundColor:TitleLabelColor];
+    [offButton setTitle:NSLocalizedString(@"off", nil) forState:UIControlStateNormal];
+    [offButton.titleLabel setFont:[UIFont systemFontOfSize:14]];
+    [offButton addTarget:self action:@selector(clickOffButton) forControlEvents:UIControlEventTouchUpInside];
+    offButton.layer.cornerRadius = 15;
+    offButton.layer.masksToBounds = YES;
+    [bcview addSubview:offButton];
+    
+    openButton  = [[UIButton alloc]initWithFrame:CGRectMake(SCREENWIDTH-90, 15, 30, 30)];
+    [openButton setBackgroundColor:TitleLabelColor];
+    [openButton.titleLabel setFont:[UIFont systemFontOfSize:14]];
+    [openButton setTitle:NSLocalizedString(@"open", nil) forState:UIControlStateNormal];
+    [openButton addTarget:self action:@selector(clickOpenButton) forControlEvents:UIControlEventTouchUpInside];
+    openButton.layer.cornerRadius = 15;
+    openButton.layer.masksToBounds = YES;
+    [bcview addSubview:openButton];
+    
+    statusLabel = [[UILabel alloc]initWithFrame:CGRectMake(SCREENWIDTH-140, 0, 40, 60)];
+    statusLabel.textAlignment = NSTextAlignmentCenter;
+    statusLabel.font = [UIFont systemFontOfSize:18];
+    
+    [bcview addSubview:statusLabel];
+    
+    //    _smartSwitch = [[UISwitch alloc]initWithFrame:CGRectMake(SCREENWIDTH-71, 14.5, 51, 31)];//51x31
+    //    [_smartSwitch addTarget:self action:@selector(switchAction:) forControlEvents:UIControlEventValueChanged];
+    //    [bcview addSubview:_smartSwitch];
     
     UIView *line = [[UIView alloc]initWithFrame:CGRectMake(20, 59.5, SCREENWIDTH-20, 0.5)];
     line.backgroundColor = [UIColor colorWithRed:222/255.0 green:222/255.0 blue:222/255.0 alpha:1];
@@ -75,9 +104,15 @@
 -(void)layoutSubviews{
     _titleLabel.text = [_dic objectForKey:@"switchName"];
     if ([[_dic objectForKey:@"switchStatus"] isEqualToString:@"0"]) {
-       _smartSwitch.on = NO;
+        _titleLabel.textColor = [UIColor blackColor];
+        statusLabel.textColor = [UIColor blackColor];
+        statusLabel.text = NSLocalizedString(@"off", nil);
+        //       _smartSwitch.on = NO;
     }else{
-        _smartSwitch.on = YES;
+        //        _smartSwitch.on = YES;
+        statusLabel.textColor = TitleLabelColor;
+        _titleLabel.textColor = TitleLabelColor;
+        statusLabel.text = NSLocalizedString(@"open", nil);
     }
 }
 
@@ -90,6 +125,27 @@
         status = @"0";
     }
     self.returnSwitchStatus(status);
+}
+
+
+-(void)clickOffButton{
+    if ([[_dic objectForKey:@"switchStatus"] isEqualToString:@"0"]){
+        [[GosTipView sharedInstance]showTipMessage:NSLocalizedString(@"The_current_state_is_closed", nil) delay:1 completion:^{
+            
+        }];
+        return;
+    }
+    self.returnSwitchStatus(@"0");
+}
+-(void)clickOpenButton{
+    if ([[_dic objectForKey:@"switchStatus"] isEqualToString:@"1"]){
+        [[GosTipView sharedInstance]showTipMessage:NSLocalizedString(@"The_current_state_is_open", nil) delay:1 completion:^{
+            
+        }];
+        return;
+    }
+    self.returnSwitchStatus(@"1");
+    
 }
 
 @end

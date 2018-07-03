@@ -72,11 +72,11 @@
     cell.dic = dic;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.returnSwitchStatus = ^(NSString *switchStatus) {
-  
         [dic setObject:switchStatus forKey:@"switchStatus"];
         NSMutableArray *array = [NSMutableArray arrayWithArray:self.userInfo.smartSwitchArray];
         [array replaceObjectAtIndex:indexPath.row withObject:[NSDictionary dictionaryWithDictionary:dic]];
         self.userInfo.smartSwitchArray = array;
+        [self.tableView reloadData];
         [GSMUserInfo storageUserInfoWithUserInfo:self.userInfo];
         _switchID = [dic objectForKey:@"switchID"];
         _switchStatus = [dic objectForKey:@"switchStatus"];
