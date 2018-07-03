@@ -119,7 +119,7 @@ numberOfRowsInComponent:(NSInteger)component {
 -(NSMutableArray *)hourArray{
     if (_hourArray == nil) {
         NSMutableArray *hourArray = [NSMutableArray array];
-        for (int i = 0; i < 12; i++) {
+        for (int i = 0; i < 24; i++) {
             [hourArray addObject:[NSString stringWithFormat:@"%d",i]];
         }
         _hourArray = hourArray;

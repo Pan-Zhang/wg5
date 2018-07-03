@@ -10,8 +10,21 @@
 #import "GSMEmergencyCallTableViewCell.h"
 #import "GSMEmergencyCallSttingViewController.h"
 
-#define GSMInquiryAlarmPhone [NSString stringWithFormat:@"%@06%@",self.userInfo.password,switchID]
-#define GSMSettingsAlarmPhone [NSString stringWithFormat:@"%@07%@%@%@%@",self.userInfo.password,switchID,callstatus,phoneLenth,phone]
+#define GSMInquiryAlarmPhone [NSString stringWithFormat:@"%@0601%@",self.userInfo.password,switchID]
+
+/**
+ 数据说明
+ 
+ self.userInfo.password   用户密码
+ 4表示参数长度：一个开关ID，三位设置状态
+ switchID  开关ID
+ callstatus 设置状态
+ 
+ phoneLenth：电话号码长度
+ phone：电话号码
+ 
+ */
+#define GSMSettingsAlarmPhone [NSString stringWithFormat:@"%@074%@%@%@%@",self.userInfo.password,switchID,callstatus,phoneLenth,phone]
 
 @interface GSMEmergencyCallViewController ()<UITableViewDelegate,UITableViewDataSource>{
     NSString *switchID;
@@ -81,7 +94,9 @@
         NSMutableDictionary *ecsvcdic = [NSMutableDictionary dictionaryWithDictionary: [self.userInfo.policeArray objectAtIndex:indexPath.row]];
         ecsvc.dic = ecsvcdic;
         ecsvc.clickLeftBtn = ^(NSDictionary *dic) {
-            [self.userInfo.policeArray replaceObjectAtIndex:indexPath.row withObject:dic];
+            NSMutableArray *array = [NSMutableArray arrayWithArray:self.userInfo.policeArray];
+            [array replaceObjectAtIndex:indexPath.row withObject:dic];
+            self.userInfo.policeArray = array;
             [GSMUserInfo storageUserInfoWithUserInfo:self.userInfo];
             [self.tableView reloadData];
             switchID = [dic objectForKey:@"switchID"];

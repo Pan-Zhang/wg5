@@ -10,8 +10,8 @@
 #import "GSMApplianceTimingTableViewCell.h"
 #import "GSMApplianceTimingSttingViewController.h"
 
-#define GSMInquiryAppliance [NSString stringWithFormat:@"%@04%@",self.userInfo.password,switchID]//查询
-#define GSMSettingAppliance [NSString stringWithFormat:@"%@05%@%@%@%@%@%@%@%@%@%@%@%@%@",self.userInfo.password,switchID,enable,IsOff,socketID,week_1,week_2,week_3,week_4,week_5,week_6,week_7,hour,minute]//设置
+#define GSMInquiryAppliance [NSString stringWithFormat:@"%@0402%@",self.userInfo.password,switchID]//查询
+#define GSMSettingAppliance [NSString stringWithFormat:@"%@0517%@%@%@%@%@%@%@%@%@%@%@%@%@",self.userInfo.password,switchID,enable,IsOff,socketID,week_1,week_2,week_3,week_4,week_5,week_6,week_7,hour,minute]//设置
 
 @interface GSMApplianceTimingViewController ()<UITableViewDelegate,UITableViewDataSource>{
     NSString *switchID;//开关id
@@ -107,7 +107,10 @@
     GSMApplianceTimingSttingViewController *atsvc = [[GSMApplianceTimingSttingViewController alloc]init];
     atsvc.dic = [NSMutableDictionary dictionaryWithDictionary:[self.userInfo.applianceTimingArray objectAtIndex:indexPath.row]];
     atsvc.clickLeftBtn = ^(NSMutableDictionary *dic) {
-        [self.userInfo.applianceTimingArray replaceObjectAtIndex:indexPath.row withObject:dic];
+        [dic setObject:@"1" forKey:@"switchStatus"];//对参数设置后，开关自动打开
+        NSMutableArray *arrya = [NSMutableArray arrayWithArray:self.userInfo.applianceTimingArray];
+        [arrya replaceObjectAtIndex:indexPath.row withObject:dic];
+        self.userInfo.applianceTimingArray = arrya;
         [GSMUserInfo storageUserInfoWithUserInfo:self.userInfo];
         [self.tableView reloadData];
         [self settingDataWithDic:dic];

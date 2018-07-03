@@ -7,7 +7,7 @@
 //
 
 #define GSMInquiryArming [NSString stringWithFormat:@"%@08%@",self.userInfo.password,switchID]//查询
-#define GSMSettingArming [NSString stringWithFormat:@"%@09%@%@%@%@%@%@%@%@%@%@%@%@",self.userInfo.password,switchID,enable,IsArm,week_1,week_2,week_3,week_4,week_5,week_6,week_7,hour,minute]//查询
+#define GSMSettingArming [NSString stringWithFormat:@"%@0914%@%@%@%@%@%@%@%@%@%@%@%@",self.userInfo.password,switchID,enable,IsArm,week_1,week_2,week_3,week_4,week_5,week_6,week_7,hour,minute]//查询
 
 #import "GSMScheduledArmingViewController.h"
 #import "GSMScheduledArmingCell.h"
@@ -87,8 +87,12 @@
         [self showMessageView:self.userInfo.hostNumber title:nil body:GSMInquiryArming];
     };
     cell.clickSwitch = ^(NSString *status) {
-        NSMutableDictionary *dic = [self.userInfo.scheduledArmingArray objectAtIndex:indexPath.row];
+        NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithDictionary:[self.userInfo.scheduledArmingArray objectAtIndex:indexPath.row]];
         [dic setObject:status forKey:@"switchStatus"];
+        NSMutableArray *array = [NSMutableArray arrayWithArray:self.userInfo.scheduledArmingArray];
+        [array replaceObjectAtIndex:indexPath.row withObject:dic];
+        self.userInfo.scheduledArmingArray = array;
+        
         [GSMUserInfo storageUserInfoWithUserInfo:self.userInfo];
         [self settingDataWithDic:dic];
     };
@@ -105,7 +109,11 @@
     NSMutableDictionary *dictionary = [[NSMutableDictionary alloc]initWithDictionary:[self.userInfo.scheduledArmingArray objectAtIndex:indexPath.row]];
     sasvc.dic = dictionary;
     sasvc.clickLeftBtn = ^(NSMutableDictionary *dic) {
-        [self.userInfo.scheduledArmingArray replaceObjectAtIndex:indexPath.row withObject:dic];
+        //设置数据后，开关直接打开
+        [dic setObject:@"1" forKey:@"switchStatus"];
+        NSMutableArray *arrya = [NSMutableArray arrayWithArray:self.userInfo.scheduledArmingArray];
+        [arrya replaceObjectAtIndex:indexPath.row withObject:dic];
+        self.userInfo.scheduledArmingArray = arrya;
         [self.tableView reloadData];
         [GSMUserInfo storageUserInfoWithUserInfo:self.userInfo];
         [self settingDataWithDic:dic];

@@ -76,16 +76,16 @@
         if (i == 0) {
             NSString *status = [self.dic objectForKey:@"status"];
             if ([status isEqualToString:@"0"]) {
-                button.selected = NO;
-            }else{
                 button.selected = YES;
+            }else{
+                button.selected = NO;
             }
         }else{
             NSString *status = [self.dic objectForKey:@"status"];
             if ([status isEqualToString:@"0"]) {
-                button.selected = YES;
-            }else{
                 button.selected = NO;
+            }else{
+                button.selected = YES;
             }
         }
 

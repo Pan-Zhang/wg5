@@ -9,7 +9,7 @@
 #import "GSMSmartSwitchViewController.h"
 #import "GSMSmartSwitchTableViewCell.h"
 
-#define GSMSmartSwitch [NSString stringWithFormat:@"%@03%@%@",self.userInfo.password,_switchID,_switchStatus]//智能开关
+#define GSMSmartSwitch [NSString stringWithFormat:@"%@0303%@%@",self.userInfo.password,_switchID,_switchStatus]//智能开关
 
 @interface GSMSmartSwitchViewController ()<UITableViewDelegate,UITableViewDataSource>{
     NSString *_switchID;
@@ -68,12 +68,15 @@
     if (cell == nil) {
         cell = [[GSMSmartSwitchTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
-    NSMutableDictionary *dic = [self.userInfo.smartSwitchArray objectAtIndex:indexPath.row];
+    NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithDictionary:[self.userInfo.smartSwitchArray objectAtIndex:indexPath.row]];
     cell.dic = dic;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.returnSwitchStatus = ^(NSString *switchStatus) {
+  
         [dic setObject:switchStatus forKey:@"switchStatus"];
-        [self.userInfo.smartSwitchArray replaceObjectAtIndex:indexPath.row withObject:dic];
+        NSMutableArray *array = [NSMutableArray arrayWithArray:self.userInfo.smartSwitchArray];
+        [array replaceObjectAtIndex:indexPath.row withObject:[NSDictionary dictionaryWithDictionary:dic]];
+        self.userInfo.smartSwitchArray = array;
         [GSMUserInfo storageUserInfoWithUserInfo:self.userInfo];
         _switchID = [dic objectForKey:@"switchID"];
         _switchStatus = [dic objectForKey:@"switchStatus"];

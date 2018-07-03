@@ -24,11 +24,11 @@
 
 #define GSMCallBack [NSString stringWithFormat:@"%@1400",self.userInfo.password]//电话回拨
 #define GSMDisarmCheck [NSString stringWithFormat:@"%@0000",self.userInfo.password]//布撤防查询
-#define GSMSMSReply [NSString stringWithFormat:@"%@15%@",self.userInfo.password,self.userInfo.smsswitch]//短信回复开关
+#define GSMSMSReply [NSString stringWithFormat:@"%@1501%@",self.userInfo.password,self.userInfo.smsswitch]//短信回复开关
 #define GSMDisarmSMSCheck [NSString stringWithFormat:@"%@1600",self.userInfo.password]//布撤防短信查询
-#define GSMSMSNoticeSAVE [NSString stringWithFormat:@"%@17%@%@%@",self.userInfo.password,self.userInfo.ArmSmsNotice,self.userInfo.DisarmSmsNotice,self.userInfo.HomeSmsNotice]//布撤防短信通知设置
+#define GSMSMSNoticeSAVE [NSString stringWithFormat:@"%@1703%@%@%@",self.userInfo.password,self.userInfo.ArmSmsNotice,self.userInfo.DisarmSmsNotice,self.userInfo.HomeSmsNotice]//布撤防短信通知设置
 
-#define GSMA_D_H_Settings [NSString stringWithFormat:@"%@01%@",self.userInfo.password,self.userInfo.A_D_H_Settings]//布撤防短信通知设置
+#define GSMA_D_H_Settings [NSString stringWithFormat:@"%@0101%@",self.userInfo.password,self.userInfo.A_D_H_Settings]//布撤防短信通知设置
 
 #define SCREENHEIGHT [UIScreen mainScreen].bounds.size.height//获取设备屏幕的长
 #define SCREENWIDTH [UIScreen mainScreen].bounds.size.width//获取设备屏幕的宽
