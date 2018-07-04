@@ -68,25 +68,25 @@
     _titleLabel.textColor = [UIColor blackColor];
     [bcview addSubview:_titleLabel];
     
-    offButton = [[UIButton alloc]initWithFrame:CGRectMake(SCREENWIDTH-50, 15, 30, 30)];
+    offButton = [[UIButton alloc]initWithFrame:CGRectMake(SCREENWIDTH-60, 10, 40, 40)];
     [offButton setBackgroundColor:TitleLabelColor];
     [offButton setTitle:NSLocalizedString(@"off", nil) forState:UIControlStateNormal];
     [offButton.titleLabel setFont:[UIFont systemFontOfSize:14]];
     [offButton addTarget:self action:@selector(clickOffButton) forControlEvents:UIControlEventTouchUpInside];
-    offButton.layer.cornerRadius = 15;
+    offButton.layer.cornerRadius = 20;
     offButton.layer.masksToBounds = YES;
     [bcview addSubview:offButton];
     
-    openButton  = [[UIButton alloc]initWithFrame:CGRectMake(SCREENWIDTH-90, 15, 30, 30)];
+    openButton  = [[UIButton alloc]initWithFrame:CGRectMake(SCREENWIDTH-110, 10, 40, 40)];
     [openButton setBackgroundColor:TitleLabelColor];
     [openButton.titleLabel setFont:[UIFont systemFontOfSize:14]];
     [openButton setTitle:NSLocalizedString(@"open", nil) forState:UIControlStateNormal];
     [openButton addTarget:self action:@selector(clickOpenButton) forControlEvents:UIControlEventTouchUpInside];
-    openButton.layer.cornerRadius = 15;
+    openButton.layer.cornerRadius = 20;
     openButton.layer.masksToBounds = YES;
     [bcview addSubview:openButton];
     
-    statusLabel = [[UILabel alloc]initWithFrame:CGRectMake(SCREENWIDTH-140, 0, 40, 60)];
+    statusLabel = [[UILabel alloc]initWithFrame:CGRectMake(SCREENWIDTH-180, 0, 60, 60)];
     statusLabel.textAlignment = NSTextAlignmentCenter;
     statusLabel.font = [UIFont systemFontOfSize:18];
     

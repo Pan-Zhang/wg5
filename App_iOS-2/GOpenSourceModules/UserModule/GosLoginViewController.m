@@ -290,11 +290,11 @@
         password = self.passwordCell.textPassword.text;
     }
     if([username isEqualToString:@""]) {
-        [common showAlert:NSLocalizedString(@"please input cellphone", nil) disappear:YES];
+//        [common showAlert:NSLocalizedString(@"please input cellphone", nil) disappear:YES];
         return;
     }
     if ([password isEqualToString:@""]) {
-        [common showAlert:NSLocalizedString(@"please input password", nil) disappear:YES];
+//        [common showAlert:NSLocalizedString(@"please input password", nil) disappear:YES];
         return;
     }
     showHUDAddedTo(self.view, YES);
