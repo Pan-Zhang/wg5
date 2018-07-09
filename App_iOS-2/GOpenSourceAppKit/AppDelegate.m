@@ -20,6 +20,8 @@
 #import "GosDeviceController.h"
 #import "GosDeviceViewController.h"
 
+#import <AudioToolbox/AudioToolbox.h>
+
 @interface AppDelegate () <GizWifiSDKDelegate, WXApiDelegate>
 
 @end
@@ -177,7 +179,33 @@
     NSString *content = [aps valueForKey:@"alert"];
     NSString *title = [userInfo valueForKey:@"title"];
     if([title isEqualToString:@"警情"]){
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:content delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        NSError *error = nil;
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:[content dataUsingEncoding:NSASCIIStringEncoding] options:NSJSONReadingAllowFragments error:&error];
+        int type = [[dic valueForKey:@"type"]intValue];
+        int zone = [[dic valueForKey:@"zone"]intValue];
+        NSString *warn_mess;
+        if(zone>0 && zone<100){
+            warn_mess = [NSString stringWithFormat:@"%d防区报警", zone];
+        }
+        else if(zone==124){
+            warn_mess = @"电量不足";
+        }
+        else if(zone==125){
+            warn_mess = @"交流电关";
+        }
+        else if(zone==126){
+            warn_mess = @"交流电开";
+        }
+        
+        NSString *pathString = [[NSBundle mainBundle]pathForResource:@"warn"ofType:@"mp3"];
+        static SystemSoundID shake_sound_male_id = 0;
+        if(pathString){
+            //注册声音到系统
+            AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath:pathString],&shake_sound_male_id);
+        }
+        AudioServicesPlaySystemSound(shake_sound_male_id);
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:warn_mess delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [_alertArray addObject:alert];
         [alert show];
     }
