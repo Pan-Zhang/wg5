@@ -63,6 +63,7 @@
 @property (nonatomic, strong) NSMutableArray *alarmRecordArray;
 @property (nonatomic, strong) NSMutableArray *callArray;
 @property (nonatomic, strong) NSMutableArray *timeArray;
+@property (nonatomic, assign) int previoutNum;
 
 @end
 
@@ -543,6 +544,28 @@
         
         if(data != nil && [data count] != 0)
         {
+            int alarmZone = [[data valueForKey:@"AlarmZone"]intValue];
+            if(_previoutNum!=alarmZone){
+                _previoutNum = alarmZone;
+                NSString *warn_mess = @"";
+                if(alarmZone>0 && alarmZone<100){
+                    warn_mess = [NSString stringWithFormat:@"%d防区报警", alarmZone];
+                }
+                else if(alarmZone==126){
+                    warn_mess = @"电量不足";
+                }
+                else if(alarmZone==125){
+                    warn_mess = @"交流电关";
+                }
+                else if(alarmZone==124){
+                    warn_mess = @"交流电开";
+                }
+                if(![warn_mess isEqualToString:@""]){
+                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"警报" message:warn_mess delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                    [alert show];
+                }
+            }
+            
             // 读取所有数据点值
             [self.deviceControl readDataPointsFromData:dataMap];
             [self.tableView reloadData];
@@ -1303,11 +1326,13 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.isViewVisable = YES;
+    self.deviceControl.isFirstView = true;
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
     self.isViewVisable = NO;
+    self.deviceControl.isFirstView = false;
 }
 
 @end

@@ -21,6 +21,7 @@
 #import "GosDeviceViewController.h"
 
 #import <AudioToolbox/AudioToolbox.h>
+#import "GosDeviceControl.h"
 
 @interface AppDelegate () <GizWifiSDKDelegate, WXApiDelegate>
 
@@ -179,6 +180,9 @@
     NSString *content = [aps valueForKey:@"alert"];
     NSString *title = [userInfo valueForKey:@"title"];
     if([title isEqualToString:@"警情"]){
+        if([GosDeviceControl sharedInstance].isFirstView){
+            return;
+        }
         NSError *error = nil;
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:[content dataUsingEncoding:NSASCIIStringEncoding] options:NSJSONReadingAllowFragments error:&error];
         int type = [[dic valueForKey:@"type"]intValue];
