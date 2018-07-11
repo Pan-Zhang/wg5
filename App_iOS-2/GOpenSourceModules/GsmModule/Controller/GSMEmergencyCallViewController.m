@@ -16,7 +16,7 @@
  数据说明
  
  self.userInfo.password   用户密码
- 4表示参数长度：一个开关ID，三位设置状态
+ settingNumber：参数长度：（一个开关ID，三位设置状态）+2（电话号码的长度 ）+电话号码的长度
  switchID  开关ID
  callstatus 设置状态
  
@@ -24,9 +24,10 @@
  phone：电话号码
  
  */
-#define GSMSettingsAlarmPhone [NSString stringWithFormat:@"%@074%@%@%@%@",self.userInfo.password,switchID,callstatus,phoneLenth,phone]
+#define GSMSettingsAlarmPhone [NSString stringWithFormat:@"%@07%@%@%@%@%@",self.userInfo.password,settingNumber,switchID,callstatus,phoneLenth,phone]
 
 @interface GSMEmergencyCallViewController ()<UITableViewDelegate,UITableViewDataSource>{
+    NSString *settingNumber;
     NSString *switchID;
     NSString *callstatus;
     NSString *phoneLenth;
@@ -105,6 +106,10 @@
             phoneLenth = [NSString stringWithFormat:@"%lu",(unsigned long)phone.length];
             if (phoneLenth.length == 1) {
                phoneLenth = [NSString stringWithFormat:@"0%@",phoneLenth];
+            }
+            settingNumber = [NSString stringWithFormat:@"%ld",6+[phoneLenth integerValue]];
+            if (settingNumber.length == 1) {
+                settingNumber = [NSString stringWithFormat:@"0%@",settingNumber];
             }
             [self showMessageView:self.userInfo.hostNumber title:nil body:GSMSettingsAlarmPhone];
         };

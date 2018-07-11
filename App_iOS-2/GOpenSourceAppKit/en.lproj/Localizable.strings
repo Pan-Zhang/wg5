@@ -366,3 +366,4 @@
 
 "The_current_state_is_closed" = "The current state is closed";
 "The_current_state_is_open" = "The current state is open";
+"delay_arm_disarm" = "Delay Setting";

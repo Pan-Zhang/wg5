@@ -391,7 +391,7 @@
 
 "call_back" = "电话回拨";
 "arm_disarm_query" = "布撤防查询";
-"delay_arm_disarm" = "延时布撤防";
+"delay_arm_disarm" = "延时设置";
 "time_arm_disarm" = "定时布撤防";
 
 "home_time" = "家电定时";

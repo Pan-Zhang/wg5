@@ -72,9 +72,9 @@
             NSMutableDictionary *dic = [NSMutableDictionary dictionary];
             NSString *switchID;
             if ([NSString stringWithFormat:@"%d",i].length == 1) {
-                switchID = [NSString stringWithFormat:@"0%d",i+1];
+                switchID = [NSString stringWithFormat:@"0%d",i];
             }else{
-                switchID = [NSString stringWithFormat:@"%d",i+1];
+                switchID = [NSString stringWithFormat:@"%d",i];
             }
             [dic setObject:switchID forKey:@"switchID"];//开关ID
             [dic setObject:[NSString stringWithFormat:@"Outlet%d",i+1] forKey:@"switchName"];//开关名称

@@ -100,7 +100,7 @@
 }
 
 -(void)clickButton:(UIButton *)sender{
-    if (sender.selected) {
+    if (!sender.selected) {
         return;
     }
     sender.selected = !sender.selected;

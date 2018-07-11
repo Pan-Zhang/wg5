@@ -1504,7 +1504,7 @@
 				TargetAttributes = {
 					1A38874A1CA11CB3001D4BAF = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 2UECKN7J9G;
+						DevelopmentTeam = V35XAR6P97;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
@@ -2021,7 +2021,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = GOpenSourceAppKit.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 2UECKN7J9G;
+				DEVELOPMENT_TEAM = V35XAR6P97;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2038,7 +2038,7 @@
 					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/JPush",
 					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/WechatOpenSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gizwits.zhangpan;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gamePKFootBall;
 				PRODUCT_NAME = GOpenSourceAppKit;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2053,7 +2053,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = GOpenSourceAppKit.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 2UECKN7J9G;
+				DEVELOPMENT_TEAM = V35XAR6P97;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2070,7 +2070,7 @@
 					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/JPush",
 					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/WechatOpenSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gizwits.zhangpan;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gamePKFootBall;
 				PRODUCT_NAME = GOpenSourceAppKit;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
