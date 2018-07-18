@@ -24,7 +24,7 @@
         _reasonStr = @"App";
     }
     else if(_reason>127 && _reason<149){
-        _reasonStr = [@"RFID " stringByAppendingString:[NSString stringWithFormat:@"%d", _reason-127]];
+        _reasonStr = [@"RFID " stringByAppendingString:[NSString stringWithFormat:@"%d", _reason-128]];
     }
     return _reasonStr;
 }

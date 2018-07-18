@@ -230,122 +230,181 @@
     switch (dataPoint) {
         case GosDevice_Outlet1:
         {
-            NSString *dataPointStr = [data valueForKey:Data__Attr_Outlet1];
-            self.key_Outlet1 = dataPointStr.boolValue;
+            if([data valueForKey:Data__Attr_Outlet1]!=nil){
+                NSString *dataPointStr = [data valueForKey:Data__Attr_Outlet1];
+                self.key_Outlet1 = dataPointStr.boolValue;
+            }
             break;
         }
         case GosDevice_Outlet2:
         {
-            NSString *dataPointStr = [data valueForKey:Data__Attr_Outlet2];
-            self.key_Outlet2 = dataPointStr.boolValue;
+            if([data valueForKey:Data__Attr_Outlet2]!=nil){
+                NSString *dataPointStr = [data valueForKey:Data__Attr_Outlet2];
+                self.key_Outlet2 = dataPointStr.boolValue;
+            }
+            
             break;
         }
         case GosDevice_Outlet3:
         {
-            NSString *dataPointStr = [data valueForKey:Data__Attr_Outlet3];
-            self.key_Outlet3 = dataPointStr.boolValue;
+            if([data valueForKey:Data__Attr_Outlet3]!=nil){
+                NSString *dataPointStr = [data valueForKey:Data__Attr_Outlet3];
+                self.key_Outlet3 = dataPointStr.boolValue;
+            }
+           
             break;
         }
         case GosDevice_Outlet4:
         {
-            NSString *dataPointStr = [data valueForKey:Data__Attr_Outlet4];
-            self.key_Outlet4 = dataPointStr.boolValue;
+            if([data valueForKey:Data__Attr_Outlet4]!=nil){
+                NSString *dataPointStr = [data valueForKey:Data__Attr_Outlet4];
+                self.key_Outlet4 = dataPointStr.boolValue;
+            }
+            
             break;
         }
         case GosDevice_Outlet5:
         {
-            NSString *dataPointStr = [data valueForKey:Data__Attr_Outlet5];
-            self.key_Outlet5 = dataPointStr.boolValue;
+            if([data valueForKey:Data__Attr_Outlet5]!=nil){
+                NSString *dataPointStr = [data valueForKey:Data__Attr_Outlet5];
+                self.key_Outlet5 = dataPointStr.boolValue;
+            }
+            
             break;
         }
         case GosDevice_Outlet6:
         {
-            NSString *dataPointStr = [data valueForKey:Data__Attr_Outlet6];
-            self.key_Outlet6 = dataPointStr.boolValue;
+            if([data valueForKey:Data__Attr_Outlet6]!=nil){
+                NSString *dataPointStr = [data valueForKey:Data__Attr_Outlet6];
+                self.key_Outlet6 = dataPointStr.boolValue;
+            }
+            
             break;
         }
         case GosDevice_Outlet7:
         {
-            NSString *dataPointStr = [data valueForKey:Data__Attr_Outlet7];
-            self.key_Outlet7 = dataPointStr.boolValue;
+            if([data valueForKey:Data__Attr_Outlet7]!=nil){
+                NSString *dataPointStr = [data valueForKey:Data__Attr_Outlet7];
+                self.key_Outlet7 = dataPointStr.boolValue;
+            }
+            
             break;
         }
         case GosDevice_Outlet8:
         {
-            NSString *dataPointStr = [data valueForKey:Data__Attr_Outlet8];
-            self.key_Outlet8 = dataPointStr.boolValue;
+            if([data valueForKey:Data__Attr_Outlet8]!=nil){
+                NSString *dataPointStr = [data valueForKey:Data__Attr_Outlet8];
+                self.key_Outlet8 = dataPointStr.boolValue;
+            }
+            
             break;
         }
         case GosDevice_Outlet9:
         {
-            NSString *dataPointStr = [data valueForKey:Data__Attr_Outlet9];
-            self.key_Outlet9 = dataPointStr.boolValue;
+            if([data valueForKey:Data__Attr_Outlet9]!=nil){
+                NSString *dataPointStr = [data valueForKey:Data__Attr_Outlet9];
+                self.key_Outlet9 = dataPointStr.boolValue;
+            }
+            
             break;
         }
         case GosDevice_Outlet10:
         {
-            NSString *dataPointStr = [data valueForKey:Data__Attr_Outlet10];
-            self.key_Outlet10 = dataPointStr.boolValue;
+            if([data valueForKey:Data__Attr_Outlet10]!=nil){
+                NSString *dataPointStr = [data valueForKey:Data__Attr_Outlet10];
+                self.key_Outlet10 = dataPointStr.boolValue;
+            }
+            
             break;
         }
         case GosDevice_Outlet11:
         {
-            NSString *dataPointStr = [data valueForKey:Data__Attr_Outlet11];
-            self.key_Outlet11 = dataPointStr.boolValue;
+            if([data valueForKey:Data__Attr_Outlet11]!=nil){
+                NSString *dataPointStr = [data valueForKey:Data__Attr_Outlet11];
+                self.key_Outlet11 = dataPointStr.boolValue;
+            }
+            
             break;
         }
         case GosDevice_Outlet12:
         {
-            NSString *dataPointStr = [data valueForKey:Data__Attr_Outlet12];
-            self.key_Outlet12 = dataPointStr.boolValue;
+            if([data valueForKey:Data__Attr_Outlet12]!=nil){
+                NSString *dataPointStr = [data valueForKey:Data__Attr_Outlet12];
+                self.key_Outlet12 = dataPointStr.boolValue;
+            }
+            
             break;
         }
         case GosDevice_Outlet13:
         {
-            NSString *dataPointStr = [data valueForKey:Data__Attr_Outlet13];
-            self.key_Outlet13 = dataPointStr.boolValue;
+            if([data valueForKey:Data__Attr_Outlet13]!=nil){
+                NSString *dataPointStr = [data valueForKey:Data__Attr_Outlet13];
+                self.key_Outlet13 = dataPointStr.boolValue;
+            }
+            
             break;
         }
         case GosDevice_Outlet14:
         {
-            NSString *dataPointStr = [data valueForKey:Data__Attr_Outlet14];
-            self.key_Outlet14 = dataPointStr.boolValue;
+            if([data valueForKey:Data__Attr_Outlet14]!=nil){
+                NSString *dataPointStr = [data valueForKey:Data__Attr_Outlet14];
+                self.key_Outlet14 = dataPointStr.boolValue;
+            }
+            
             break;
         }
         case GosDevice_Outlet15:
         {
-            NSString *dataPointStr = [data valueForKey:Data__Attr_Outlet15];
-            self.key_Outlet15 = dataPointStr.boolValue;
+            if([data valueForKey:Data__Attr_Outlet15]!=nil){
+                NSString *dataPointStr = [data valueForKey:Data__Attr_Outlet15];
+                self.key_Outlet15 = dataPointStr.boolValue;
+            }
+            
             break;
         }
         case GosDevice_Outlet16:
         {
-            NSString *dataPointStr = [data valueForKey:Data__Attr_Outlet16];
-            self.key_Outlet16 = dataPointStr.boolValue;
+            if([data valueForKey:Data__Attr_Outlet16]!=nil){
+                NSString *dataPointStr = [data valueForKey:Data__Attr_Outlet16];
+                self.key_Outlet16 = dataPointStr.boolValue;
+            }
+            
             break;
         }
         case GosDevice_Outlet17:
         {
-            NSString *dataPointStr = [data valueForKey:Data__Attr_Outlet17];
-            self.key_Outlet17 = dataPointStr.boolValue;
+            if([data valueForKey:Data__Attr_Outlet17]!=nil){
+                NSString *dataPointStr = [data valueForKey:Data__Attr_Outlet17];
+                self.key_Outlet17 = dataPointStr.boolValue;
+            }
+            
             break;
         }
         case GosDevice_Outlet18:
         {
-            NSString *dataPointStr = [data valueForKey:Data__Attr_Outlet18];
-            self.key_Outlet18 = dataPointStr.boolValue;
+            if([data valueForKey:Data__Attr_Outlet18]!=nil){
+                NSString *dataPointStr = [data valueForKey:Data__Attr_Outlet18];
+                self.key_Outlet18 = dataPointStr.boolValue;
+            }
+            
             break;
         }
         case GosDevice_Outlet19:
         {
-            NSString *dataPointStr = [data valueForKey:Data__Attr_Outlet19];
-            self.key_Outlet19 = dataPointStr.boolValue;
+            if([data valueForKey:Data__Attr_Outlet19]!=nil){
+                NSString *dataPointStr = [data valueForKey:Data__Attr_Outlet19];
+                self.key_Outlet19 = dataPointStr.boolValue;
+            }
+            
             break;
         }
         case GosDevice_Outlet20:
         {
-            NSString *dataPointStr = [data valueForKey:Data__Attr_Outlet20];
-            self.key_Outlet20 = dataPointStr.boolValue;
+            if([data valueForKey:Data__Attr_Outlet20]!=nil){
+                NSString *dataPointStr = [data valueForKey:Data__Attr_Outlet20];
+                self.key_Outlet20 = dataPointStr.boolValue;
+            }
+            
             break;
         }
         case GosDevice_ZoneStatus:

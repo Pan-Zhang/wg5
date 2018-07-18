@@ -91,6 +91,8 @@ typedef enum
 @property (nonatomic, assign) NSInteger key_ZoneStatus;
 @property (nonatomic, assign) NSInteger key_AlarmZone;
 
+@property (nonatomic, assign) BOOL isFirstView;
+
 // 设备
 @property (nonatomic, strong)  GizWifiDevice *device;
 
