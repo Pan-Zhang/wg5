@@ -9,19 +9,12 @@
 /* Begin PBXBuildFile section */
 		1A083C3B1D08112A0050B161 /* GosDeviceListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A083C391D08112A0050B161 /* GosDeviceListCell.m */; };
 		1A083C3C1D08112A0050B161 /* GosDeviceListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A083C3A1D08112A0050B161 /* GosDeviceListCell.xib */; };
-		1A083C441D111E5A0050B161 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A083C421D111E5A0050B161 /* TencentOpenAPI.framework */; };
 		1A083C451D111E5A0050B161 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1A083C431D111E5A0050B161 /* TencentOpenApi_IOS_Bundle.bundle */; };
 		1A083C471D111FEA0050B161 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A083C461D111FEA0050B161 /* Security.framework */; };
 		1A083C491D11201A0050B161 /* libiconv.2.4.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A083C481D11201A0050B161 /* libiconv.2.4.0.tbd */; };
 		1A083C4B1D1120240050B161 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A083C4A1D1120240050B161 /* SystemConfiguration.framework */; };
-		1A083C4D1D11202C0050B161 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A083C4C1D11202C0050B161 /* CoreGraphics.framework */; };
-		1A083C4F1D1120360050B161 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A083C4E1D1120360050B161 /* libsqlite3.0.tbd */; };
-		1A083C511D11203D0050B161 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A083C501D11203D0050B161 /* CoreTelephony.framework */; };
-		1A083C531D1120460050B161 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A083C521D1120460050B161 /* libstdc++.6.0.9.tbd */; };
 		1A083C571D1120540050B161 /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A083C561D1120540050B161 /* libz.1.2.5.tbd */; };
 		1A083C901D17CB420050B161 /* GosPushManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A083C8F1D17CB420050B161 /* GosPushManager.m */; };
-		1A083C981D17D0780050B161 /* libBPush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A083C941D17D0780050B161 /* libBPush.a */; };
-		1A083C991D17D0780050B161 /* jpush-ios-2.1.7.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A083C961D17D0780050B161 /* jpush-ios-2.1.7.a */; };
 		1A35CD441CE99B3C0073627C /* GizLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A35CD221CE99B3C0073627C /* GizLog.m */; };
 		1A35CD451CE99B3C0073627C /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A35CD251CE99B3C0073627C /* MBProgressHUD.m */; };
 		1A35CD481CE99B3C0073627C /* QRCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A35CD2B1CE99B3C0073627C /* QRCodeController.m */; };
@@ -75,7 +68,6 @@
 		1AAC342F1CFC3BAC00A5D1A9 /* GosSettings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AAC34311CFC3BAC00A5D1A9 /* GosSettings.storyboard */; };
 		1AAC34351CFC3D6300A5D1A9 /* GosAirLink.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AAC34371CFC3D6300A5D1A9 /* GosAirLink.storyboard */; };
 		1AAC343B1CFC3E2C00A5D1A9 /* GosSoftAP.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AAC343D1CFC3E2C00A5D1A9 /* GosSoftAP.storyboard */; };
-		1ADE5FE31D3F2F6400FC2BFE /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ADE5FDE1D3F2F6400FC2BFE /* libWeChatSDK.a */; };
 		1ADE5FE41D3F2F6400FC2BFE /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1ADE5FDF1D3F2F6400FC2BFE /* README.txt */; };
 		1ADE5FE71D3F2F8E00FC2BFE /* GosWifiPasswordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADE5FE61D3F2F8E00FC2BFE /* GosWifiPasswordCell.m */; };
 		1ADE5FEA1D3F2FAA00FC2BFE /* GosWifiPasswordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ADE5FE81D3F2FAA00FC2BFE /* GosWifiPasswordCell.xib */; };
@@ -95,15 +87,11 @@
 		1ADE60211D3F31DE00FC2BFE /* login_password.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ADE60071D3F31DE00FC2BFE /* login_password.png */; };
 		1ADE60221D3F31DE00FC2BFE /* login_user.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ADE60081D3F31DE00FC2BFE /* login_user.png */; };
 		1ADE60231D3F31DE00FC2BFE /* LoginBanner.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ADE60091D3F31DE00FC2BFE /* LoginBanner.png */; };
-		1ADE60241D3F31DE00FC2BFE /* more@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ADE600A1D3F31DE00FC2BFE /* more@2x.png */; };
 		1ADE60251D3F31DE00FC2BFE /* phone.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ADE600B1D3F31DE00FC2BFE /* phone.png */; };
 		1ADE60261D3F31DE00FC2BFE /* qq.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ADE600C1D3F31DE00FC2BFE /* qq.png */; };
 		1ADE60291D3F31DE00FC2BFE /* sms.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ADE600F1D3F31DE00FC2BFE /* sms.png */; };
 		1ADE602A1D3F31DE00FC2BFE /* wechat.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ADE60101D3F31DE00FC2BFE /* wechat.png */; };
 		1ADE602D1D3F349600FC2BFE /* UIConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = 1ADE602C1D3F349600FC2BFE /* UIConfig.json */; };
-		332DA7281F8DFECF004B1102 /* GizWifiSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 332DA7271F8DFECF004B1102 /* GizWifiSDK.framework */; };
-		332DA7291F8DFED7004B1102 /* GizWifiSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 332DA7271F8DFECF004B1102 /* GizWifiSDK.framework */; };
-		332DA72A1F8DFED7004B1102 /* GizWifiSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 332DA7271F8DFECF004B1102 /* GizWifiSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		33E55E331E6922BA00F34413 /* GosAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E55E1D1E6922BA00F34413 /* GosAlertView.m */; };
 		33E55E341E6922BA00F34413 /* GosTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E55E1F1E6922BA00F34413 /* GosTipView.m */; };
 		33E55E351E6922BA00F34413 /* NSString+HexToBytes.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E55E211E6922BA00F34413 /* NSString+HexToBytes.m */; };
@@ -145,7 +133,20 @@
 		6934EBA5207376DB004FCB7C /* SetPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6934EBA3207376DB004FCB7C /* SetPhoneViewController.m */; };
 		6934EBA6207376DB004FCB7C /* SetPhoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6934EBA4207376DB004FCB7C /* SetPhoneViewController.xib */; };
 		6934EBAA20739DE7004FCB7C /* SetTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6934EBA820739DE7004FCB7C /* SetTimeViewController.m */; };
-		6934EBAB20739DE7004FCB7C /* SetTimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6934EBA920739DE7004FCB7C /* SetTimeViewController.xib */; };
+		697B53B9211186F7004AB18E /* SetTimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 697B53B8211186F7004AB18E /* SetTimeViewController.xib */; };
+		697B53BC2111E915004AB18E /* warn.caf in Resources */ = {isa = PBXBuildFile; fileRef = 697B53BB2111E914004AB18E /* warn.caf */; };
+		69A3703220FC36200051B0F3 /* jpush-ios-2.1.7.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A083C961D17D0780050B161 /* jpush-ios-2.1.7.a */; };
+		69A3703320FC368D0051B0F3 /* libBPush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A083C941D17D0780050B161 /* libBPush.a */; };
+		69A3703420FC36A10051B0F3 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ADE5FDE1D3F2F6400FC2BFE /* libWeChatSDK.a */; };
+		69A3703520FC37350051B0F3 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A083C501D11203D0050B161 /* CoreTelephony.framework */; };
+		69A3703620FC376F0051B0F3 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A083C421D111E5A0050B161 /* TencentOpenAPI.framework */; };
+		69A3703720FC37C30051B0F3 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A083C4E1D1120360050B161 /* libsqlite3.0.tbd */; };
+		69A3703920FC39C80051B0F3 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 69A3703820FC39C80051B0F3 /* libc++.tbd */; };
+		69A3707420FC7E260051B0F3 /* GizWifiSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69A3707320FC7E260051B0F3 /* GizWifiSDK.framework */; };
+		69A3707520FC7E320051B0F3 /* GizWifiSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69A3707320FC7E260051B0F3 /* GizWifiSDK.framework */; };
+		69A3707620FC7E320051B0F3 /* GizWifiSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 69A3707320FC7E260051B0F3 /* GizWifiSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		69CE01F820EC81CB00171CCC /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69CE01F720EC81CB00171CCC /* AudioToolbox.framework */; };
+		923409F721D6E7A979AD6A45 /* libPods-GOpenSource_AppKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4CF50FB4BE941635CA6B11A /* libPods-GOpenSource_AppKit.a */; };
 		CE2A843C20BBB07A00BF324F /* GSMScheduledArmingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2A843B20BBB07A00BF324F /* GSMScheduledArmingViewController.m */; };
 		CE2A843F20BBDF0100BF324F /* GSMApplianceTimingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2A843E20BBDF0100BF324F /* GSMApplianceTimingViewController.m */; };
 		CE2A844220BBECB600BF324F /* GSMApplianceTimingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2A844120BBECB600BF324F /* GSMApplianceTimingTableViewCell.m */; };
@@ -222,13 +223,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		E21CCA0A1D9D1C650051C6D3 /* Embed Frameworks */ = {
+		69A3706F20FC7A840051B0F3 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				332DA72A1F8DFED7004B1102 /* GizWifiSDK.framework in Embed Frameworks */,
+				69A3707620FC7E320051B0F3 /* GizWifiSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,13 +377,11 @@
 		1ADE60071D3F31DE00FC2BFE /* login_password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_password.png; sourceTree = "<group>"; };
 		1ADE60081D3F31DE00FC2BFE /* login_user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_user.png; sourceTree = "<group>"; };
 		1ADE60091D3F31DE00FC2BFE /* LoginBanner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LoginBanner.png; sourceTree = "<group>"; };
-		1ADE600A1D3F31DE00FC2BFE /* more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "more@2x.png"; sourceTree = "<group>"; };
 		1ADE600B1D3F31DE00FC2BFE /* phone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone.png; sourceTree = "<group>"; };
 		1ADE600C1D3F31DE00FC2BFE /* qq.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qq.png; sourceTree = "<group>"; };
 		1ADE600F1D3F31DE00FC2BFE /* sms.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sms.png; sourceTree = "<group>"; };
 		1ADE60101D3F31DE00FC2BFE /* wechat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wechat.png; sourceTree = "<group>"; };
 		1ADE602C1D3F349600FC2BFE /* UIConfig.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UIConfig.json; sourceTree = "<group>"; };
-		332DA7271F8DFECF004B1102 /* GizWifiSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GizWifiSDK.framework; sourceTree = "<group>"; };
 		33E55E1C1E6922BA00F34413 /* GosAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GosAlertView.h; sourceTree = "<group>"; };
 		33E55E1D1E6922BA00F34413 /* GosAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GosAlertView.m; sourceTree = "<group>"; };
 		33E55E1E1E6922BA00F34413 /* GosTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GosTipView.h; sourceTree = "<group>"; };
@@ -453,7 +452,16 @@
 		6934EBA4207376DB004FCB7C /* SetPhoneViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetPhoneViewController.xib; sourceTree = "<group>"; };
 		6934EBA720739DE7004FCB7C /* SetTimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetTimeViewController.h; sourceTree = "<group>"; };
 		6934EBA820739DE7004FCB7C /* SetTimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetTimeViewController.m; sourceTree = "<group>"; };
-		6934EBA920739DE7004FCB7C /* SetTimeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetTimeViewController.xib; sourceTree = "<group>"; };
+		697B53B8211186F7004AB18E /* SetTimeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetTimeViewController.xib; sourceTree = "<group>"; };
+		697B53BB2111E914004AB18E /* warn.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = warn.caf; path = ../../../Desktop/warn.caf; sourceTree = "<group>"; };
+		69A3703020FC35DE0051B0F3 /* JPUSHService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JPUSHService.h; sourceTree = "<group>"; };
+		69A3703120FC35DE0051B0F3 /* jpush-ios-2.1.7.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-ios-2.1.7.a"; sourceTree = "<group>"; };
+		69A3703820FC39C80051B0F3 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		69A3703E20FC43400051B0F3 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		69A3704920FC5C9B0051B0F3 /* more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "more@2x.png"; sourceTree = "<group>"; };
+		69A3707320FC7E260051B0F3 /* GizWifiSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GizWifiSDK.framework; sourceTree = "<group>"; };
+		69CE01F720EC81CB00171CCC /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		B4CF50FB4BE941635CA6B11A /* libPods-GOpenSource_AppKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GOpenSource_AppKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2A843A20BBB07A00BF324F /* GSMScheduledArmingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSMScheduledArmingViewController.h; sourceTree = "<group>"; };
 		CE2A843B20BBB07A00BF324F /* GSMScheduledArmingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GSMScheduledArmingViewController.m; sourceTree = "<group>"; };
 		CE2A843D20BBDF0100BF324F /* GSMApplianceTimingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSMApplianceTimingViewController.h; sourceTree = "<group>"; };
@@ -503,6 +511,7 @@
 		CEB0FDE720BBA23600D0DB17 /* GSMSmartSwitchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GSMSmartSwitchViewController.m; sourceTree = "<group>"; };
 		CEB0FDE920BBA50000D0DB17 /* GSMSmartSwitchTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSMSmartSwitchTableViewCell.h; sourceTree = "<group>"; };
 		CEB0FDEA20BBA50000D0DB17 /* GSMSmartSwitchTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GSMSmartSwitchTableViewCell.m; sourceTree = "<group>"; };
+		D402AD1878382E693F8FF0C3 /* Pods-GOpenSource_AppKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GOpenSource_AppKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-GOpenSource_AppKit/Pods-GOpenSource_AppKit.release.xcconfig"; sourceTree = "<group>"; };
 		E216A38E1E497BDF0034095B /* ESP@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ESP@2x.jpg"; sourceTree = "<group>"; };
 		E216A38F1E497BDF0034095B /* HF@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "HF@2x.jpg"; sourceTree = "<group>"; };
 		E216A3901E497BDF0034095B /* MXCHIP@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "MXCHIP@2x.jpg"; sourceTree = "<group>"; };
@@ -659,6 +668,7 @@
 		E2ED6EEB1DDEF74300297595 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/GosUserLogoutTableViewCell.xib; sourceTree = "<group>"; };
 		E2F5B2651E278FCD00E4CE53 /* circle-add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle-add@2x.png"; sourceTree = "<group>"; };
 		E2F5B26A1E27921900E4CE53 /* grid@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grid@2x.png"; sourceTree = "<group>"; };
+		EE8CA9036EB5777014632AAE /* Pods-GOpenSource_AppKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GOpenSource_AppKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GOpenSource_AppKit/Pods-GOpenSource_AppKit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -666,20 +676,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69A3703920FC39C80051B0F3 /* libc++.tbd in Frameworks */,
+				69A3707420FC7E260051B0F3 /* GizWifiSDK.framework in Frameworks */,
+				69A3703720FC37C30051B0F3 /* libsqlite3.0.tbd in Frameworks */,
+				69A3703620FC376F0051B0F3 /* TencentOpenAPI.framework in Frameworks */,
+				69A3703520FC37350051B0F3 /* CoreTelephony.framework in Frameworks */,
+				69A3703420FC36A10051B0F3 /* libWeChatSDK.a in Frameworks */,
+				69A3703320FC368D0051B0F3 /* libBPush.a in Frameworks */,
+				69A3703220FC36200051B0F3 /* jpush-ios-2.1.7.a in Frameworks */,
+				69CE01F820EC81CB00171CCC /* AudioToolbox.framework in Frameworks */,
+				69A3707520FC7E320051B0F3 /* GizWifiSDK.framework in Frameworks */,
 				1A083C571D1120540050B161 /* libz.1.2.5.tbd in Frameworks */,
-				332DA7291F8DFED7004B1102 /* GizWifiSDK.framework in Frameworks */,
-				1A083C531D1120460050B161 /* libstdc++.6.0.9.tbd in Frameworks */,
-				1A083C981D17D0780050B161 /* libBPush.a in Frameworks */,
-				1A083C511D11203D0050B161 /* CoreTelephony.framework in Frameworks */,
-				1A083C4F1D1120360050B161 /* libsqlite3.0.tbd in Frameworks */,
-				1A083C991D17D0780050B161 /* jpush-ios-2.1.7.a in Frameworks */,
-				1A083C4D1D11202C0050B161 /* CoreGraphics.framework in Frameworks */,
 				1A083C4B1D1120240050B161 /* SystemConfiguration.framework in Frameworks */,
-				332DA7281F8DFECF004B1102 /* GizWifiSDK.framework in Frameworks */,
 				1A083C491D11201A0050B161 /* libiconv.2.4.0.tbd in Frameworks */,
 				1A083C471D111FEA0050B161 /* Security.framework in Frameworks */,
-				1ADE5FE31D3F2F6400FC2BFE /* libWeChatSDK.a in Frameworks */,
-				1A083C441D111E5A0050B161 /* TencentOpenAPI.framework in Frameworks */,
+				923409F721D6E7A979AD6A45 /* libPods-GOpenSource_AppKit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -733,7 +744,7 @@
 		1A35CD171CE99B3C0073627C /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				33D7FC881E6D1BC900BA5CD3 /* GizWifiSDK */,
+				69A3707320FC7E260051B0F3 /* GizWifiSDK.framework */,
 				E27E52511DF517EF00F9D148 /* openssl */,
 				1ADE5FDD1D3F2F6400FC2BFE /* WechatOpenSDK */,
 				1A083C921D17D0780050B161 /* BPush */,
@@ -820,11 +831,14 @@
 		1A3887421CA11CB3001D4BAF = {
 			isa = PBXGroup;
 			children = (
+				697B53BB2111E914004AB18E /* warn.caf */,
 				E2C918861D95053400F422CB /* GOpenSourceAppKit.entitlements */,
 				1A35CD171CE99B3C0073627C /* Library */,
 				1AAC33361CF6FBFC00A5D1A9 /* GOpenSourceModules */,
 				1AAC33231CF6F80300A5D1A9 /* GOpenSourceAppKit */,
 				1A38874C1CA11CB3001D4BAF /* Products */,
+				69CE01F620EC81CB00171CCC /* Frameworks */,
+				FDB3CFCC6EDEB8ACCDF59C65 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1048,27 +1062,19 @@
 				1ADE60011D3F31DE00FC2BFE /* 08-icon-add@2x.png */,
 				1ADE60021D3F31DE00FC2BFE /* 08-icon-Device@2x.png */,
 				1ADE60031D3F31DE00FC2BFE /* back_arrow@2x.png */,
+				69A3704920FC5C9B0051B0F3 /* more@2x.png */,
 				1ADE60041D3F31DE00FC2BFE /* check.png */,
 				1ADE60051D3F31DE00FC2BFE /* Icon@2x.png */,
 				1ADE60061D3F31DE00FC2BFE /* icon_notice@2x.png */,
 				1ADE60071D3F31DE00FC2BFE /* login_password.png */,
 				1ADE60081D3F31DE00FC2BFE /* login_user.png */,
 				1ADE60091D3F31DE00FC2BFE /* LoginBanner.png */,
-				1ADE600A1D3F31DE00FC2BFE /* more@2x.png */,
 				1ADE600B1D3F31DE00FC2BFE /* phone.png */,
 				1ADE600C1D3F31DE00FC2BFE /* qq.png */,
 				1ADE600F1D3F31DE00FC2BFE /* sms.png */,
 				1ADE60101D3F31DE00FC2BFE /* wechat.png */,
 			);
 			path = Images;
-			sourceTree = "<group>";
-		};
-		33D7FC881E6D1BC900BA5CD3 /* GizWifiSDK */ = {
-			isa = PBXGroup;
-			children = (
-				332DA7271F8DFECF004B1102 /* GizWifiSDK.framework */,
-			);
-			path = GizWifiSDK;
 			sourceTree = "<group>";
 		};
 		33E55E031E6922BA00F34413 /* DeviceControl */ = {
@@ -1181,7 +1187,7 @@
 				6934EBA4207376DB004FCB7C /* SetPhoneViewController.xib */,
 				6934EBA720739DE7004FCB7C /* SetTimeViewController.h */,
 				6934EBA820739DE7004FCB7C /* SetTimeViewController.m */,
-				6934EBA920739DE7004FCB7C /* SetTimeViewController.xib */,
+				697B53B8211186F7004AB18E /* SetTimeViewController.xib */,
 			);
 			path = AlertController;
 			sourceTree = "<group>";
@@ -1202,6 +1208,28 @@
 				CE5C7C4C20D2674100A30CB5 /* UserInfo.plist */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		69A3702F20FC35DE0051B0F3 /* JPush */ = {
+			isa = PBXGroup;
+			children = (
+				69A3703020FC35DE0051B0F3 /* JPUSHService.h */,
+				69A3703120FC35DE0051B0F3 /* jpush-ios-2.1.7.a */,
+			);
+			name = JPush;
+			path = "../../../git/wg5/App_iOS-2/Library/JPush";
+			sourceTree = "<group>";
+		};
+		69CE01F620EC81CB00171CCC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				69A3703E20FC43400051B0F3 /* UserNotifications.framework */,
+				69A3703820FC39C80051B0F3 /* libc++.tbd */,
+				69A3702F20FC35DE0051B0F3 /* JPush */,
+				69CE01F720EC81CB00171CCC /* AudioToolbox.framework */,
+				B4CF50FB4BE941635CA6B11A /* libPods-GOpenSource_AppKit.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		CEB0FDD820B559B800D0DB17 /* View */ = {
@@ -1472,6 +1500,15 @@
 			path = UserManager;
 			sourceTree = "<group>";
 		};
+		FDB3CFCC6EDEB8ACCDF59C65 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EE8CA9036EB5777014632AAE /* Pods-GOpenSource_AppKit.debug.xcconfig */,
+				D402AD1878382E693F8FF0C3 /* Pods-GOpenSource_AppKit.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1479,10 +1516,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1A3887621CA11CB3001D4BAF /* Build configuration list for PBXNativeTarget "GOpenSource_AppKit" */;
 			buildPhases = (
+				4A2C656194320F7C87E05C2C /* [CP] Check Pods Manifest.lock */,
 				1A3887471CA11CB3001D4BAF /* Sources */,
 				1A3887481CA11CB3001D4BAF /* Frameworks */,
 				1A3887491CA11CB3001D4BAF /* Resources */,
-				E21CCA0A1D9D1C650051C6D3 /* Embed Frameworks */,
+				69A3706F20FC7A840051B0F3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1504,9 +1542,12 @@
 				TargetAttributes = {
 					1A38874A1CA11CB3001D4BAF = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = V35XAR6P97;
+						DevelopmentTeam = 2UECKN7J9G;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.Push = {
 								enabled = 1;
 							};
@@ -1556,7 +1597,6 @@
 				1ADE601B1D3F31DE00FC2BFE /* 08-icon-add@2x.png in Resources */,
 				E264B2EC1E28871F007D6542 /* scan@2x.png in Resources */,
 				E254F28F1E1DF47000C0F369 /* GosSharingMessageCell.xib in Resources */,
-				6934EBAB20739DE7004FCB7C /* SetTimeViewController.xib in Resources */,
 				1AAC33B81CF6FBFC00A5D1A9 /* GosDeviceController.xib in Resources */,
 				E26E42661DF80F7C005BF72D /* GosUserManager.storyboard in Resources */,
 				E264B2EA1E288716007D6542 /* friends@2x.png in Resources */,
@@ -1581,7 +1621,6 @@
 				1ADE60191D3F31DE00FC2BFE /* 04-softap.gif in Resources */,
 				1ADE601D1D3F31DE00FC2BFE /* back_arrow@2x.png in Resources */,
 				1ADE601C1D3F31DE00FC2BFE /* 08-icon-Device@2x.png in Resources */,
-				1ADE60241D3F31DE00FC2BFE /* more@2x.png in Resources */,
 				E216A39B1E497BDF0034095B /* WM@2x.jpg in Resources */,
 				33E55E561E6928DA00F34413 /* GosDeviceEnumCell.xib in Resources */,
 				1ADE601E1D3F31DE00FC2BFE /* check.png in Resources */,
@@ -1618,9 +1657,11 @@
 				CE5C7C4D20D2674100A30CB5 /* UserInfo.plist in Resources */,
 				E22855691D94DE0D00F3B6A0 /* GosMain.storyboard in Resources */,
 				33E55E601E6928DA00F34413 /* back_arrow@2x.png in Resources */,
+				697B53BC2111E915004AB18E /* warn.caf in Resources */,
 				1A35CD4D1CE99B3C0073627C /* unchecked@2x.png in Resources */,
 				1ADE60291D3F31DE00FC2BFE /* sms.png in Resources */,
 				E264B2E61E28865E007D6542 /* user@2x.png in Resources */,
+				697B53B9211186F7004AB18E /* SetTimeViewController.xib in Resources */,
 				E216A3981E497BDF0034095B /* QCA@2x.jpg in Resources */,
 				1ADE60221D3F31DE00FC2BFE /* login_user.png in Resources */,
 				1AAC342F1CFC3BAC00A5D1A9 /* GosSettings.storyboard in Resources */,
@@ -1628,6 +1669,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4A2C656194320F7C87E05C2C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GOpenSource_AppKit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1A3887471CA11CB3001D4BAF /* Sources */ = {
@@ -2016,18 +2078,22 @@
 		};
 		1A3887631CA11CB3001D4BAF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE8CA9036EB5777014632AAE /* Pods-GOpenSource_AppKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = GOpenSourceAppKit.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = V35XAR6P97;
+				COMPRESS_PNG_FILES = YES;
+				DEVELOPMENT_TEAM = 2UECKN7J9G;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Library/GizWifiSDK",
 					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/GizWifiSDK",
 					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/TencentOpenAPI",
+					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)",
+					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/StaticLibrary",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/GOpenSourceAppKit/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2037,28 +2103,35 @@
 					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/BPush",
 					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/JPush",
 					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/WechatOpenSDK",
+					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/StaticLibrary",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gizwits.zhangpan;
 				PRODUCT_NAME = GOpenSourceAppKit;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				STRIP_PNG_TEXT = YES;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		1A3887641CA11CB3001D4BAF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D402AD1878382E693F8FF0C3 /* Pods-GOpenSource_AppKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = GOpenSourceAppKit.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = V35XAR6P97;
+				COMPRESS_PNG_FILES = YES;
+				DEVELOPMENT_TEAM = 2UECKN7J9G;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Library/GizWifiSDK",
 					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/GizWifiSDK",
 					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/TencentOpenAPI",
+					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)",
+					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/StaticLibrary",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/GOpenSourceAppKit/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2068,10 +2141,13 @@
 					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/BPush",
 					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/JPush",
 					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/WechatOpenSDK",
+					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/StaticLibrary",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gizwits.zhangpan;
 				PRODUCT_NAME = GOpenSourceAppKit;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				STRIP_PNG_TEXT = YES;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
