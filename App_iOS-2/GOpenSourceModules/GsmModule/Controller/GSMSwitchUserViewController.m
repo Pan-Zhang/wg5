@@ -5,10 +5,11 @@
 //  Created by hello on 2018/6/11.
 //  Copyright © 2018年 Gizwits. All rights reserved.
 //
-
+#define SCREENWIDTH [UIScreen mainScreen].bounds.size.width//获取设备屏幕的宽
 #import "GSMSwitchUserViewController.h"
 #import "GSMAddUserViewController.h"
 #import "GSMUserInfo.h"
+#import "GosTipView.h"
 
 #define TitleLabelColor [UIColor colorWithRed:19/255.0 green:152/255.0 blue:234/255.0 alpha:1/1.0]
 
@@ -58,7 +59,7 @@
         tableView.delegate = self;
         tableView.dataSource = self;
         tableView.tableFooterView = [[UIView alloc]init];
-        tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        //        tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [self.view addSubview:tableView];
         
         _tableView = tableView;
@@ -84,6 +85,15 @@
         cell.textLabel.textColor = TitleLabelColor;
     }
     cell.imageView.image = [UIImage imageNamed:@"adduser_cell_image"];
+    
+    UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(SCREENWIDTH-80, 15, 60, 30)];
+    button.tag = indexPath.row;
+    [button setBackgroundColor:[UIColor redColor]];
+    [button.titleLabel setFont:[UIFont systemFontOfSize:15]];
+    [button setTitle:NSLocalizedString(@"Delete", nil) forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(clickDeleteButton:) forControlEvents:UIControlEventTouchUpInside];
+    [cell addSubview:button];
+    
     return cell;
 }
 
@@ -116,14 +126,35 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)clickDeleteButton:(UIButton *)sender{
+    UIAlertView *deleteUserAlertView=[[UIAlertView alloc]initWithTitle:NSLocalizedString(@"delete_confirm", nil) message:NSLocalizedString(@"delete_massage", nil) delegate:self cancelButtonTitle:NSLocalizedString(@"cancel", nil) otherButtonTitles:NSLocalizedString(@"confirm_delete", nil), nil];
+    deleteUserAlertView.delegate=self;
+    deleteUserAlertView.tag = sender.tag;
+    [deleteUserAlertView show];
 }
-*/
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex == 1) {
+        GSMUserInfo *userinfo = [self.dataArray objectAtIndex:alertView.tag];
+        [GSMUserInfo deleteUserWithUserName:userinfo.userName];
+        self.dataArray = [NSMutableArray arrayWithArray:[GSMUserInfo returnUserArray]];
+        [[GosTipView sharedInstance]showTipMessage:NSLocalizedString(@"USER_is_Delete", nil) delay:1 completion:^{
+            [self.tableView reloadData];
+            if ([userinfo.userName isEqualToString: self.userInfo.userName]) {
+                [self.navigationController popToRootViewControllerAnimated:YES];
+            }
+        }];
+    }
+}
+
+/*
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

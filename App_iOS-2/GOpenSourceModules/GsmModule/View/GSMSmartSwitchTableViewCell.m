@@ -129,21 +129,21 @@
 
 
 -(void)clickOffButton{
-    if ([[_dic objectForKey:@"switchStatus"] isEqualToString:@"0"]){
-        [[GosTipView sharedInstance]showTipMessage:NSLocalizedString(@"The_current_state_is_closed", nil) delay:1 completion:^{
-            
-        }];
-        return;
-    }
+//    if ([[_dic objectForKey:@"switchStatus"] isEqualToString:@"0"]){
+//        [[GosTipView sharedInstance]showTipMessage:NSLocalizedString(@"The_current_state_is_closed", nil) delay:1 completion:^{
+//
+//        }];
+//        return;
+//    }
     self.returnSwitchStatus(@"0");
 }
 -(void)clickOpenButton{
-    if ([[_dic objectForKey:@"switchStatus"] isEqualToString:@"1"]){
-        [[GosTipView sharedInstance]showTipMessage:NSLocalizedString(@"The_current_state_is_open", nil) delay:1 completion:^{
-            
-        }];
-        return;
-    }
+//    if ([[_dic objectForKey:@"switchStatus"] isEqualToString:@"1"]){
+//        [[GosTipView sharedInstance]showTipMessage:NSLocalizedString(@"The_current_state_is_open", nil) delay:1 completion:^{
+//            
+//        }];
+//        return;
+//    }
     self.returnSwitchStatus(@"1");
     
 }

@@ -458,3 +458,11 @@
 "power off" = "电量不足";
 "alternating current open" = "交流电开";
 "alternating current close" = "交流电关";
+
+
+"USER_is_Delete" = "用户已删除";
+"cancel" = "取消";
+"confirm_delete"= "确定删除";
+"delete_confirm"= "删除确定";
+"delete_massage" = "是否删除该账号，删除该账号后，app记录该账号设备状态在本手机也将被清除。";
+"Delete" = "删除";

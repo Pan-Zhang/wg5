@@ -92,7 +92,7 @@
         for (int i = 0; i < 8; i ++) {
             NSMutableDictionary *dic = [NSMutableDictionary dictionary];
             [dic setObject:[NSString stringWithFormat:@"%d",i] forKey:@"switchID"];//开关ID
-//            [dic setObject:[NSString stringWithFormat:@"第%d组",i+1] forKey:@"switchName"];//开关名称
+            //            [dic setObject:[NSString stringWithFormat:@"第%d组",i+1] forKey:@"switchName"];//开关名称
             [dic setObject:[NSString stringWithFormat:@"%d%@",i+1,NSLocalizedString(@"GP", nil)] forKey:@"switchName"];
             [dic setObject:@"0" forKey:@"0"];//开关状态
             [dic setObject:@"0" forKey:@"1"];
@@ -158,9 +158,9 @@
 +(void)storageUserInfoWithUserInfo:(GSMUserInfo *)userInfo{
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSMutableArray *userInfoArray  = [NSMutableArray arrayWithArray:[userDefaults objectForKey:@"USERINFO"]];
-//    NSString *filePathName = [[NSBundle mainBundle] pathForResource:@"/UserInfo" ofType:@"plist"];
-//    NSArray *plistArray = [NSArray arrayWithContentsOfFile:filePathName];
-//    NSMutableArray *userInfoArray = [NSMutableArray arrayWithArray:plistArray];
+    //    NSString *filePathName = [[NSBundle mainBundle] pathForResource:@"/UserInfo" ofType:@"plist"];
+    //    NSArray *plistArray = [NSArray arrayWithContentsOfFile:filePathName];
+    //    NSMutableArray *userInfoArray = [NSMutableArray arrayWithArray:plistArray];
     if (userInfoArray.count == 0) {
         userInfoArray = [NSMutableArray array];
         NSMutableDictionary *userdic = [self returnUserInfoDictionaryWithUserInfo:userInfo];
@@ -181,8 +181,8 @@
         }
     }
     NSArray *arr = [NSArray arrayWithArray:userInfoArray];
-//    NSURL *fileUrl = [NSURL fileURLWithPath:filePathName];
-//    [arr writeToURL:fileUrl atomically:YES];
+    //    NSURL *fileUrl = [NSURL fileURLWithPath:filePathName];
+    //    [arr writeToURL:fileUrl atomically:YES];
     [userDefaults setObject:arr forKey:@"USERINFO"];
     [userDefaults synchronize];
 }
@@ -190,9 +190,9 @@
 +(GSMUserInfo *)retunUserInfo{
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSMutableArray *userInfoArray  = [NSMutableArray arrayWithArray:[userDefaults objectForKey:@"USERINFO"]];
-//    NSString *filePathName = [[NSBundle mainBundle] pathForResource:@"/UserInfo" ofType:@"plist"];
-//    NSArray *plistArray = [NSArray arrayWithContentsOfFile:filePathName];
-//    NSMutableArray *userInfoArray = [NSMutableArray arrayWithArray:plistArray];
+    //    NSString *filePathName = [[NSBundle mainBundle] pathForResource:@"/UserInfo" ofType:@"plist"];
+    //    NSArray *plistArray = [NSArray arrayWithContentsOfFile:filePathName];
+    //    NSMutableArray *userInfoArray = [NSMutableArray arrayWithArray:plistArray];
     GSMUserInfo *uf;
     for (int i = 0; i < userInfoArray.count; i++) {
         NSMutableDictionary *userdic = [NSMutableDictionary dictionaryWithDictionary:[userInfoArray objectAtIndex:i]];
@@ -206,12 +206,12 @@
 +(GSMUserInfo *)retunUserInfoWithUserName:(NSString *)userName{
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSMutableArray *userInfoArray  = [NSMutableArray arrayWithArray:[userDefaults objectForKey:@"USERINFO"]];
-//    NSString *filePathName = [[NSBundle mainBundle] pathForResource:@"/UserInfo" ofType:@"plist"];
-//    NSArray *plistArray = [NSArray arrayWithContentsOfFile:filePathName];
-//    NSMutableArray *userInfoArray = [NSMutableArray arrayWithArray:plistArray];
+    //    NSString *filePathName = [[NSBundle mainBundle] pathForResource:@"/UserInfo" ofType:@"plist"];
+    //    NSArray *plistArray = [NSArray arrayWithContentsOfFile:filePathName];
+    //    NSMutableArray *userInfoArray = [NSMutableArray arrayWithArray:plistArray];
     GSMUserInfo *uf;
     for (int i = 0; i < userInfoArray.count; i++) {
-         NSMutableDictionary *userdic = [NSMutableDictionary dictionaryWithDictionary:[userInfoArray objectAtIndex:i]];
+        NSMutableDictionary *userdic = [NSMutableDictionary dictionaryWithDictionary:[userInfoArray objectAtIndex:i]];
         if ([[userdic objectForKey:@"userName"] isEqualToString:userName]) {
             uf = [self returnGSMUserInfoWithDic:userdic];
         }
@@ -223,9 +223,9 @@
     NSMutableArray *array = [NSMutableArray array];
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSMutableArray *userInfoArray  = [NSMutableArray arrayWithArray:[userDefaults objectForKey:@"USERINFO"]];
-//    NSString *filePathName = [[NSBundle mainBundle] pathForResource:@"/UserInfo" ofType:@"plist"];
-//    NSArray *plistArray = [NSArray arrayWithContentsOfFile:filePathName];
-//    NSMutableArray *userInfoArray = [NSMutableArray arrayWithArray:plistArray];
+    //    NSString *filePathName = [[NSBundle mainBundle] pathForResource:@"/UserInfo" ofType:@"plist"];
+    //    NSArray *plistArray = [NSArray arrayWithContentsOfFile:filePathName];
+    //    NSMutableArray *userInfoArray = [NSMutableArray arrayWithArray:plistArray];
     for (int i = 0; i < userInfoArray.count; i++) {
         NSMutableDictionary *userdic = [NSMutableDictionary dictionaryWithDictionary:[userInfoArray objectAtIndex:i]];
         GSMUserInfo *userinfo = [self returnGSMUserInfoWithDic:userdic];
@@ -233,6 +233,29 @@
     }
     return array;
 }
+
+//删除用户：根据用户名
++(void)deleteUserWithUserName:(NSString *)userName{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSMutableArray *userInfoArray  = [NSMutableArray arrayWithArray:[userDefaults objectForKey:@"USERINFO"]];
+    //    NSString *filePathName = [[NSBundle mainBundle] pathForResource:@"/UserInfo" ofType:@"plist"];
+    //    NSArray *plistArray = [NSArray arrayWithContentsOfFile:filePathName];
+    //    NSMutableArray *userInfoArray = [NSMutableArray arrayWithArray:plistArray];
+    for (int i = 0; i < userInfoArray.count; i++) {
+        NSMutableDictionary *userdic = [NSMutableDictionary dictionaryWithDictionary:[userInfoArray objectAtIndex:i]];
+        if ([[userdic objectForKey:@"userName"] isEqualToString:userName]) {
+            [userInfoArray removeObjectAtIndex:i];
+        }
+    }
+    NSArray *arr = [NSArray arrayWithArray:userInfoArray];
+    //    NSURL *fileUrl = [NSURL fileURLWithPath:filePathName];
+    //    [arr writeToURL:fileUrl atomically:YES];
+    [userDefaults setObject:arr forKey:@"USERINFO"];
+    [userDefaults synchronize];
+}
+
+
+
 
 +(NSMutableDictionary *)returnUserInfoDictionaryWithUserInfo:(GSMUserInfo *)userInfo{
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];

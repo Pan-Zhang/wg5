@@ -497,6 +497,7 @@
 		CE5C7C4620D0C28D00A30CB5 /* GSMSmsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSMSmsViewController.h; sourceTree = "<group>"; };
 		CE5C7C4720D0C28D00A30CB5 /* GSMSmsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GSMSmsViewController.m; sourceTree = "<group>"; };
 		CE5C7C4C20D2674100A30CB5 /* UserInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = UserInfo.plist; sourceTree = "<group>"; };
+		CE962CA22117FCD6008656E1 /* warn.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = warn.caf; sourceTree = "<group>"; };
 		CEB0FDDA20B55A0200D0DB17 /* GsmSettingsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GsmSettingsView.h; sourceTree = "<group>"; };
 		CEB0FDDB20B55A0200D0DB17 /* GsmSettingsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GsmSettingsView.m; sourceTree = "<group>"; };
 		CEB0FDDD20BAC40B00D0DB17 /* GsmSMSview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GsmSMSview.h; sourceTree = "<group>"; };
@@ -1233,6 +1234,7 @@
 		CE962CA12117FC6E008656E1 /* MYfile */ = {
 			isa = PBXGroup;
 			children = (
+				CE962CA22117FCD6008656E1 /* warn.caf */,
 			);
 			path = MYfile;
 			sourceTree = "<group>";

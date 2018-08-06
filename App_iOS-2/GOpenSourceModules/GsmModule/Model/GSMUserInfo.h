@@ -47,4 +47,7 @@
 
 +(NSMutableDictionary *)returnUserInfoDictionaryWithUserInfo:(GSMUserInfo *)userInfo;
 +(GSMUserInfo *)returnGSMUserInfoWithDic:(NSMutableDictionary *)dic;
+
+//删除用户：根据用户名
++(void)deleteUserWithUserName:(NSString *)userName;
 @end
