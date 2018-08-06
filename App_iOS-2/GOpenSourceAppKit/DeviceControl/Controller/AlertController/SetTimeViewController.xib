@@ -1,27 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SetTimeViewController">
             <connections>
+                <outlet property="actionlb" destination="hFY-la-FKR" id="KvC-2m-Ih5"/>
                 <outlet property="divider1" destination="PGH-7H-7qR" id="4h4-U1-izj"/>
                 <outlet property="divider2" destination="EJq-on-jkS" id="rIF-Ed-DFf"/>
                 <outlet property="divider3" destination="TiI-Dw-FGV" id="g0m-Xg-qrL"/>
                 <outlet property="five" destination="Lnh-w8-O4e" id="o4a-9n-I0u"/>
                 <outlet property="four" destination="b6u-NW-Usc" id="gZh-uQ-nzu"/>
                 <outlet property="hourPicker" destination="KYS-UI-V6I" id="Ov9-aG-l3B"/>
+                <outlet property="hourlb" destination="XYF-zn-Byn" id="mGa-Bm-GM5"/>
                 <outlet property="minutePicker" destination="9kE-ih-gVO" id="6R0-lL-6D0"/>
                 <outlet property="one" destination="3jK-JT-yNQ" id="1i3-rA-uQG"/>
                 <outlet property="onoff" destination="jrX-ll-i5X" id="t8E-LS-KvK"/>
-                <outlet property="outlet" destination="WgM-yD-mBD" id="1uZ-0H-vEy"/>
-                <outlet property="repeat" destination="eVb-xY-e7v" id="ctk-s1-0dA"/>
+                <outlet property="outletpick" destination="WgM-yD-mBD" id="On2-hw-dOw"/>
+                <outlet property="repeat" destination="eVb-xY-e7v" id="P4K-JX-IAs"/>
+                <outlet property="secondlb" destination="ho1-jK-wbe" id="TB6-L1-QEH"/>
                 <outlet property="seven" destination="PBq-X2-EWw" id="UZp-wX-4wI"/>
                 <outlet property="six" destination="lrB-Uf-bl9" id="wAz-C4-Zr6"/>
                 <outlet property="three" destination="ArL-X5-Pa5" id="j4c-39-OI2"/>
@@ -68,15 +71,8 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.85362413189999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="重复" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVb-xY-e7v">
-                    <rect key="frame" x="166" y="250" width="42" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="动作" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFY-la-FKR">
-                    <rect key="frame" x="54" y="398" width="42" height="21"/>
+                    <rect key="frame" x="54" y="398" width="62" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
@@ -131,6 +127,13 @@
                 </switch>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="分" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ho1-jK-wbe">
                     <rect key="frame" x="317" y="114" width="42" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="重复" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVb-xY-e7v">
+                    <rect key="frame" x="139" y="248" width="97" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>

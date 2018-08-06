@@ -98,6 +98,9 @@
         input1[8] = sms_bool?0x01:0x00;
         input1[9] = rfid_bool?0x01:0x00;
         NSString *str = _edit_text.text;
+        if(str.length>30){
+            str = [str substringToIndex:30];
+        }
         input1[10] = [str length];
         for(int i=0; i<[str length]; i++){
             input1[11+i] = (int)[str characterAtIndex:i];
@@ -114,6 +117,9 @@
         input1[8] = sms_bool?0x01:0x00;
         input1[9] = rfid_bool?0x01:0x00;
         NSString *str = _edit_text.text;
+        if(str.length>30){
+            str = [str substringToIndex:30];
+        }
         input1[10] = [str length];
         for(int i=0; i<[str length]; i++){
             input1[11+i] = (int)[str characterAtIndex:i];

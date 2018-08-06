@@ -723,8 +723,7 @@ static NSString *makeEncryptKey(Class class, NSString *ssid) {
 - (BOOL)setApplicationInfo:(NSDictionary *)info {
     @try {
         if (nil == info) {
-            [GizWifiSDK startWithAppID:APP_ID appSecret:APP_SECRET specialProductKeys:[GosCommon sharedInstance].productKey cloudServiceInfo:@{@"openAPIInfo": DEFAULT_API_DOMAIN,
-                                                                                        @"siteInfo": DEFAULT_SITE_DOMAIN} autoSetDeviceDomain:NO];
+            [GizWifiSDK startWithAppID:APP_ID appSecret:APP_SECRET specialProductKeys:[GosCommon sharedInstance].productKey cloudServiceInfo:@{@"openAPIInfo": DEFAULT_API_DOMAIN,@"siteInfo": DEFAULT_SITE_DOMAIN} autoSetDeviceDomain:NO];
             [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"appInfo"];
         } else {
             NSString *appid = info[@"APPID"];

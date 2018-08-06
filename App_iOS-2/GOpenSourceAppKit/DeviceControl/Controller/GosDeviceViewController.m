@@ -549,19 +549,19 @@
                 _previoutNum = alarmZone;
                 NSString *warn_mess = @"";
                 if(alarmZone>0 && alarmZone<100){
-                    warn_mess = [NSString stringWithFormat:@"%d防区报警", alarmZone];
+                    warn_mess = [NSString stringWithFormat:NSLocalizedString(@"zone warn", nil), [NSString stringWithFormat:@"%d", alarmZone]];
                 }
                 else if(alarmZone==126){
-                    warn_mess = @"电量不足";
+                    warn_mess = NSLocalizedString(@"alternating current open", nil);
                 }
                 else if(alarmZone==125){
-                    warn_mess = @"交流电关";
+                    warn_mess = NSLocalizedString(@"alternating current close", nil);
                 }
                 else if(alarmZone==124){
-                    warn_mess = @"交流电开";
+                    warn_mess = NSLocalizedString(@"power off", nil);
                 }
                 if(![warn_mess isEqualToString:@""]){
-                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"警报" message:warn_mess delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"warn", nil) message:warn_mess delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
                     [alert show];
                 }
             }

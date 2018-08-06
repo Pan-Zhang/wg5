@@ -46,7 +46,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>4</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>mqq</string>
@@ -66,10 +66,25 @@
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
-		<false/>
+		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string></string>
+	<string>use camera permission</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>use location permission</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>use location permission</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>use location permission</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>use microphone permission</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>use photo library</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>remote-notification</string>
+	</array>
 	<key>UIFileSharingEnabled</key>
 	<true/>
 	<key>UIMainStoryboardFile</key>

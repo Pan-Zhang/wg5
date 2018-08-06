@@ -314,7 +314,7 @@
 "time_on" = "timing on";
 "time_off" = "timing off";
 "socket" = "socket %d";
-"group" = "group %d";
+"group" = "%d";
 "wait link" = "linking…";
 "device_alarm" = "device alarm：";
 "error_code" = "%@ error code：%@";
@@ -367,3 +367,8 @@
 "The_current_state_is_closed" = "The current state is closed";
 "The_current_state_is_open" = "The current state is open";
 "delay_arm_disarm" = "Delay Setting";
+"zone warn" = "%@ zone alarm";
+"warn" = "warn";
+"power off" = "power off";
+"alternating current open" = "alternating current open";
+"alternating current close" = "alternating current close";

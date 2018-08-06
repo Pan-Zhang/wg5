@@ -183,25 +183,12 @@
         if([GosDeviceControl sharedInstance].isFirstView){
             return;
         }
-        NSError *error = nil;
-        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:[content dataUsingEncoding:NSASCIIStringEncoding] options:NSJSONReadingAllowFragments error:&error];
-        int type = [[dic valueForKey:@"type"]intValue];
-        int zone = [[dic valueForKey:@"zone"]intValue];
-        NSString *warn_mess;
-        if(zone>0 && zone<100){
-            warn_mess = [NSString stringWithFormat:@"%d防区报警", zone];
-        }
-        else if(zone==124){
-            warn_mess = @"电量不足";
-        }
-        else if(zone==125){
-            warn_mess = @"交流电关";
-        }
-        else if(zone==126){
-            warn_mess = @"交流电开";
-        }
+        NSRange range = [content rangeOfString:@" "];
+        int location = (int)range.location;
+        content = [content substringToIndex:location];
+        content = [NSString stringWithFormat:NSLocalizedString(@"zone warn", nil), content];
         
-        NSString *pathString = [[NSBundle mainBundle]pathForResource:@"warn"ofType:@"mp3"];
+        NSString *pathString = [[NSBundle mainBundle]pathForResource:@"warn" ofType:@"caf"];
         static SystemSoundID shake_sound_male_id = 0;
         if(pathString){
             //注册声音到系统
@@ -209,7 +196,34 @@
         }
         AudioServicesPlaySystemSound(shake_sound_male_id);
         
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:warn_mess delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"warn", nil) message:content delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [_alertArray addObject:alert];
+        [alert show];
+    }
+    else if([title isEqualToString:@"电量不足"] || [title isEqualToString:@"交流电开"] || [title isEqualToString:@"交流电关"]){
+        if([GosDeviceControl sharedInstance].isFirstView){
+            return;
+        }
+        
+        NSString *pathString = [[NSBundle mainBundle]pathForResource:@"warn" ofType:@"caf"];
+        static SystemSoundID shake_sound_male_id = 0;
+        if(pathString){
+            //注册声音到系统
+            AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath:pathString],&shake_sound_male_id);
+        }
+        AudioServicesPlaySystemSound(shake_sound_male_id);
+        
+        if([title isEqualToString:@"电量不足"]){
+            content = NSLocalizedString(@"power off", nil);
+        }
+        else if([title isEqualToString:@"交流电开"]){
+            content = NSLocalizedString(@"alternating current open", nil);
+        }
+        else{
+            content = NSLocalizedString(@"alternating current close", nil);
+        }
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"warn", nil) message:content delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [_alertArray addObject:alert];
         [alert show];
     }

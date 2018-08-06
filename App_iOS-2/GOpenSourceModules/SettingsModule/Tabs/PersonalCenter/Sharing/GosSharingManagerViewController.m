@@ -10,7 +10,7 @@
 #import <GizWifiSDK/GizWifiSDK.h>
 #import "GosCommon.h"
 
-@interface GosSharingManagerViewController () <UITableViewDelegate, UITableViewDataSource, GizDeviceSharingDelegate>
+@interface GosSharingManagerViewController () <UITableViewDelegate, UITableViewDataSource, GizWifiDeviceDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *btnSharingStatus;
 @property (weak, nonatomic) IBOutlet UIButton *btnBindUsers;

@@ -12,7 +12,7 @@
 
 -(NSString *)getNumber{
     NSString *str = @"";
-    for(int i=0; i<_numLength; i++){
+    for(int i=0; i<(_numLength<30?_numLength:30); i++){
         str = [str stringByAppendingString:_number[i]];
     }
     return str;

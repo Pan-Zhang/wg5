@@ -14,7 +14,9 @@
     [super awakeFromNib];
     // Initialization code
     _edit.frame = CGRectMake([UIScreen mainScreen].bounds.size.width-125, _edit.frame.origin.y, 50, 30);
+    [_edit setTitle:NSLocalizedString(@"edit", nil) forState:UIControlStateNormal];
     _del.frame = CGRectMake([UIScreen mainScreen].bounds.size.width-60, _del.frame.origin.y, 50, 30);
+    [_del setTitle:NSLocalizedString(@"Delete", nil) forState:UIControlStateNormal];
     _seperator.frame = CGRectMake(_seperator.frame.origin.x, _seperator.frame.origin.y, [UIScreen mainScreen].bounds.size.width, 10);
 }
 

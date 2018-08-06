@@ -49,7 +49,7 @@
     phoneCell.number.text = [NSString stringWithFormat:NSLocalizedString(@"group", nil), indexPath.row+1];
     
     NSString *str = @"";
-    for(int i=0; i<alarmCall.numLength; i++){
+    for(int i=0; i<(alarmCall.numLength<31?alarmCall.numLength:31); i++){
         str = [str stringByAppendingString:(NSString *)alarmCall.number[i]];
     }
     phoneCell.phone.text = str;

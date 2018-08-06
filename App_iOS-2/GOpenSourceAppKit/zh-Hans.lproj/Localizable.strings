@@ -452,3 +452,9 @@
 "off" = "关";
 "The_current_state_is_closed" = "当前状态已关";
 "The_current_state_is_open" = "当前状态已开";
+
+"zone warn" = "%@防区报警";
+"warn" = "警情";
+"power off" = "电量不足";
+"alternating current open" = "交流电开";
+"alternating current close" = "交流电关";

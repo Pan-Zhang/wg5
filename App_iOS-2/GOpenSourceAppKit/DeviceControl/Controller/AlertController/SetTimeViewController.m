@@ -38,14 +38,19 @@
     minute = _socketTime.minute;
     outlet = _socketTime.socket_num;
     
+    _hourlb.text = NSLocalizedString(@"h", nil);
+    _secondlb.text = NSLocalizedString(@"m", nil);
+    _actionlb.text = NSLocalizedString(@"action", nil);
+    _repeat.text = NSLocalizedString(@"repeat", nil);
+    
     _hourPicker.delegate = self;
     _hourPicker.dataSource = self;
     
     _minutePicker.delegate = self;
     _minutePicker.dataSource = self;
     
-    _outlet.delegate = self;
-    _outlet.dataSource = self;
+    _outletpick.delegate = self;
+    _outletpick.dataSource = self;
     _hourArray = [[NSMutableArray alloc]init];
     _minuteArray = [[NSMutableArray alloc]init];
     _outletArray = [[NSMutableArray alloc]init];
@@ -91,15 +96,15 @@
     
     _divider3.frame = CGRectMake(0, _divider3.frame.origin.y, [UIScreen mainScreen].bounds.size.width, _divider3.frame.size.height);
     
-    _repeat.frame = CGRectMake(([UIScreen mainScreen].bounds.size.width-42)/2, _repeat.frame.origin.y, 42, 21);
+    _repeat.frame = CGRectMake(([UIScreen mainScreen].bounds.size.width-_repeat.frame.size.width)/2, _repeat.frame.origin.y, _repeat.frame.size.width, 21);
     
     _onoff.frame = CGRectMake([UIScreen mainScreen].bounds.size.width-103, _onoff.frame.origin.y, 49, 31);
     
-    _outlet.frame = CGRectMake([UIScreen mainScreen].bounds.size.width-144, _outlet.frame.origin.y, _outlet.frame.size.width, _outlet.frame.size.height);
+    _outletpick.frame = CGRectMake([UIScreen mainScreen].bounds.size.width-144, _outletpick.frame.origin.y, _outletpick.frame.size.width, _outletpick.frame.size.height);
     
     [_hourPicker selectRow:_socketTime.hour inComponent:0 animated:NO];
     [_minutePicker selectRow:_socketTime.minute inComponent:0 animated:NO];
-    [_outlet selectRow:_socketTime.socket_num inComponent:0 animated:NO];
+    [_outletpick selectRow:_socketTime.socket_num inComponent:0 animated:NO];
     
     one_bool = _socketTime.monday;
     if(_socketTime.monday){
@@ -177,7 +182,7 @@
     else if(pickerView==_minutePicker){
         return [_minuteArray count];
     }
-    else if(pickerView==_outlet){
+    else if(pickerView==_outletpick){
         return [_outletArray count];
     }
     return 0;
@@ -192,7 +197,7 @@
     else if(pickerView==_minutePicker){
         return _minuteArray[row];
     }
-    else if(pickerView==_outlet){
+    else if(pickerView==_outletpick){
         return _outletArray[row];
     }
     return @"";
@@ -207,7 +212,7 @@
     else if(pickerView==_minutePicker){
         minute = row;
     }
-    else if(pickerView==_outlet){
+    else if(pickerView==_outletpick){
         outlet = row;
     }
 }

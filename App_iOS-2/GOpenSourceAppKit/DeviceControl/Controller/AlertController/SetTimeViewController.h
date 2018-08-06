@@ -21,11 +21,15 @@
 @property (weak, nonatomic) IBOutlet UIButton *six;
 @property (weak, nonatomic) IBOutlet UIButton *seven;
 @property (weak, nonatomic) IBOutlet UISwitch *onoff;
-@property (weak, nonatomic) IBOutlet UIPickerView *outlet;
+@property (weak, nonatomic) IBOutlet UIPickerView *outletpick;
 @property (weak, nonatomic) IBOutlet UIView *divider1;
 @property (weak, nonatomic) IBOutlet UIView *divider2;
 @property (weak, nonatomic) IBOutlet UIView *divider3;
+
 @property (weak, nonatomic) IBOutlet UILabel *repeat;
+@property (weak, nonatomic) IBOutlet UILabel *hourlb;
+@property (weak, nonatomic) IBOutlet UILabel *secondlb;
+@property (weak, nonatomic) IBOutlet UILabel *actionlb;
 
 @property (strong, nonatomic) SmartSocketTime *socketTime;
 @property (assign, nonatomic) int type;
