@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A5FC299C4BD9B5E1F872E9953E6F3E3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		4D236995A03256956E2A59D79DA7E16E /* Pods-GOpenSource_AppKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DB7C2EBD0EB82682B46819109D63F2 /* Pods-GOpenSource_AppKit-dummy.m */; };
+		DAA54E4D58B1B555B059CF5F677BFF4D /* Pods-GOpenSource_AppKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DB7C2EBD0EB82682B46819109D63F2 /* Pods-GOpenSource_AppKit-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,7 +15,6 @@
 		2CB8127079F3B8D9BC8EBEAB2F471F59 /* Pods-GOpenSource_AppKit-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GOpenSource_AppKit-acknowledgements.plist"; sourceTree = "<group>"; };
 		2E79916A2B0BE623C89D67B53B2FC4CB /* Pods-GOpenSource_AppKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GOpenSource_AppKit.release.xcconfig"; sourceTree = "<group>"; };
 		4CD686EF30AC7EF4441CAD5790E4C51A /* Pods-GOpenSource_AppKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GOpenSource_AppKit.debug.xcconfig"; sourceTree = "<group>"; };
-		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A1DB7C2EBD0EB82682B46819109D63F2 /* Pods-GOpenSource_AppKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GOpenSource_AppKit-dummy.m"; sourceTree = "<group>"; };
 		A247BC984A30BE6EBA688968BDA706EF /* Pods-GOpenSource_AppKit-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GOpenSource_AppKit-frameworks.sh"; sourceTree = "<group>"; };
@@ -25,17 +23,23 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2CBD09A528E2C010F8F4A5698E913646 /* Frameworks */ = {
+		716C6300882C4115F96C61ED42EA3531 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A5FC299C4BD9B5E1F872E9953E6F3E3 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F8D2E47FE03D3B91B51069F7C273AF4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		61FC0F7A31D91D355330F070AD001518 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -71,37 +75,21 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				0F8D2E47FE03D3B91B51069F7C273AF4 /* Frameworks */,
 				61FC0F7A31D91D355330F070AD001518 /* Products */,
 				65B21137C4F29081F43CAA78930D4A01 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		22267C0B5B10B0F9D86E2098159051B4 /* Pods-GOpenSource_AppKit */ = {
+		39B695238621D5A090241FD17CADE217 /* Pods-GOpenSource_AppKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 864699399EFA7134192E9B01AD7EA78D /* Build configuration list for PBXNativeTarget "Pods-GOpenSource_AppKit" */;
+			buildConfigurationList = 555722B2197D7E063D94979CAAF85463 /* Build configuration list for PBXNativeTarget "Pods-GOpenSource_AppKit" */;
 			buildPhases = (
-				48A38FC0A49EF60105CB493F654EE77D /* Sources */,
-				2CBD09A528E2C010F8F4A5698E913646 /* Frameworks */,
+				0A4A416CF00759E5B0F4AB60264F1AE1 /* Sources */,
+				716C6300882C4115F96C61ED42EA3531 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,17 +121,17 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				22267C0B5B10B0F9D86E2098159051B4 /* Pods-GOpenSource_AppKit */,
+				39B695238621D5A090241FD17CADE217 /* Pods-GOpenSource_AppKit */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		48A38FC0A49EF60105CB493F654EE77D /* Sources */ = {
+		0A4A416CF00759E5B0F4AB60264F1AE1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D236995A03256956E2A59D79DA7E16E /* Pods-GOpenSource_AppKit-dummy.m in Sources */,
+				DAA54E4D58B1B555B059CF5F677BFF4D /* Pods-GOpenSource_AppKit-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,7 +201,28 @@
 			};
 			name = Debug;
 		};
-		79B689F96C5104A72A036EEAF9B5BC1F /* Release */ = {
+		21960DE94C36D515AA26E5AFE7BB9338 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CD686EF30AC7EF4441CAD5790E4C51A /* Pods-GOpenSource_AppKit.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		62967A5541E11D3D74D74702FC084120 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2E79916A2B0BE623C89D67B53B2FC4CB /* Pods-GOpenSource_AppKit.release.xcconfig */;
 			buildSettings = {
@@ -234,27 +243,6 @@
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
-		};
-		9EFF21729EFC769BF9ABEB6BF8602946 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4CD686EF30AC7EF4441CAD5790E4C51A /* Pods-GOpenSource_AppKit.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
 		};
 		F4568DEE257655D290C2B9CEAB37C934 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -326,11 +314,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		864699399EFA7134192E9B01AD7EA78D /* Build configuration list for PBXNativeTarget "Pods-GOpenSource_AppKit" */ = {
+		555722B2197D7E063D94979CAAF85463 /* Build configuration list for PBXNativeTarget "Pods-GOpenSource_AppKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9EFF21729EFC769BF9ABEB6BF8602946 /* Debug */,
-				79B689F96C5104A72A036EEAF9B5BC1F /* Release */,
+				21960DE94C36D515AA26E5AFE7BB9338 /* Debug */,
+				62967A5541E11D3D74D74702FC084120 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

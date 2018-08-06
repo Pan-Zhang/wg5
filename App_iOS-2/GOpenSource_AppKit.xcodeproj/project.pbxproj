@@ -134,7 +134,6 @@
 		6934EBA6207376DB004FCB7C /* SetPhoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6934EBA4207376DB004FCB7C /* SetPhoneViewController.xib */; };
 		6934EBAA20739DE7004FCB7C /* SetTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6934EBA820739DE7004FCB7C /* SetTimeViewController.m */; };
 		697B53B9211186F7004AB18E /* SetTimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 697B53B8211186F7004AB18E /* SetTimeViewController.xib */; };
-		697B53BC2111E915004AB18E /* warn.caf in Resources */ = {isa = PBXBuildFile; fileRef = 697B53BB2111E914004AB18E /* warn.caf */; };
 		69A3703220FC36200051B0F3 /* jpush-ios-2.1.7.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A083C961D17D0780050B161 /* jpush-ios-2.1.7.a */; };
 		69A3703320FC368D0051B0F3 /* libBPush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A083C941D17D0780050B161 /* libBPush.a */; };
 		69A3703420FC36A10051B0F3 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ADE5FDE1D3F2F6400FC2BFE /* libWeChatSDK.a */; };
@@ -453,7 +452,6 @@
 		6934EBA720739DE7004FCB7C /* SetTimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetTimeViewController.h; sourceTree = "<group>"; };
 		6934EBA820739DE7004FCB7C /* SetTimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetTimeViewController.m; sourceTree = "<group>"; };
 		697B53B8211186F7004AB18E /* SetTimeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetTimeViewController.xib; sourceTree = "<group>"; };
-		697B53BB2111E914004AB18E /* warn.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = warn.caf; path = ../../../Desktop/warn.caf; sourceTree = "<group>"; };
 		69A3703020FC35DE0051B0F3 /* JPUSHService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JPUSHService.h; sourceTree = "<group>"; };
 		69A3703120FC35DE0051B0F3 /* jpush-ios-2.1.7.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-ios-2.1.7.a"; sourceTree = "<group>"; };
 		69A3703820FC39C80051B0F3 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
@@ -831,7 +829,6 @@
 		1A3887421CA11CB3001D4BAF = {
 			isa = PBXGroup;
 			children = (
-				697B53BB2111E914004AB18E /* warn.caf */,
 				E2C918861D95053400F422CB /* GOpenSourceAppKit.entitlements */,
 				1A35CD171CE99B3C0073627C /* Library */,
 				1AAC33361CF6FBFC00A5D1A9 /* GOpenSourceModules */,
@@ -1152,6 +1149,7 @@
 		6932FFCD20A5A07E007E1995 /* GsmModule */ = {
 			isa = PBXGroup;
 			children = (
+				CE962CA12117FC6E008656E1 /* MYfile */,
 				CEB0FDD920B559C500D0DB17 /* Controller */,
 				CEB0FDD820B559B800D0DB17 /* View */,
 				6934E8192069DEF300661B05 /* Model */,
@@ -1230,6 +1228,13 @@
 				B4CF50FB4BE941635CA6B11A /* libPods-GOpenSource_AppKit.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE962CA12117FC6E008656E1 /* MYfile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MYfile;
 			sourceTree = "<group>";
 		};
 		CEB0FDD820B559B800D0DB17 /* View */ = {
@@ -1542,7 +1547,7 @@
 				TargetAttributes = {
 					1A38874A1CA11CB3001D4BAF = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 2UECKN7J9G;
+						DevelopmentTeam = V35XAR6P97;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -1657,7 +1662,6 @@
 				CE5C7C4D20D2674100A30CB5 /* UserInfo.plist in Resources */,
 				E22855691D94DE0D00F3B6A0 /* GosMain.storyboard in Resources */,
 				33E55E601E6928DA00F34413 /* back_arrow@2x.png in Resources */,
-				697B53BC2111E915004AB18E /* warn.caf in Resources */,
 				1A35CD4D1CE99B3C0073627C /* unchecked@2x.png in Resources */,
 				1ADE60291D3F31DE00FC2BFE /* sms.png in Resources */,
 				E264B2E61E28865E007D6542 /* user@2x.png in Resources */,
@@ -2085,7 +2089,7 @@
 				CODE_SIGN_ENTITLEMENTS = GOpenSourceAppKit.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = YES;
-				DEVELOPMENT_TEAM = 2UECKN7J9G;
+				DEVELOPMENT_TEAM = V35XAR6P97;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2105,7 +2109,7 @@
 					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/WechatOpenSDK",
 					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/StaticLibrary",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gizwits.zhangpan;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shentongCP;
 				PRODUCT_NAME = GOpenSourceAppKit;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2123,7 +2127,7 @@
 				CODE_SIGN_ENTITLEMENTS = GOpenSourceAppKit.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = YES;
-				DEVELOPMENT_TEAM = 2UECKN7J9G;
+				DEVELOPMENT_TEAM = V35XAR6P97;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2143,7 +2147,7 @@
 					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/WechatOpenSDK",
 					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/StaticLibrary",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gizwits.zhangpan;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shentongCP;
 				PRODUCT_NAME = GOpenSourceAppKit;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
